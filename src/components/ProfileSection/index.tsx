@@ -37,7 +37,7 @@ const Summary = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 2rem;
-  padding: ${p => p.theme.spacing[3]};
+  padding-bottom: ${p => p.theme.spacing[4]};
   text-align: center;
 
   h3 {
@@ -55,6 +55,8 @@ const ProfileSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: ${p => p.theme.spacing[4]};
+  padding-top: ${p => p.theme.spacing[4]};
   width: 100%;
 `;
 

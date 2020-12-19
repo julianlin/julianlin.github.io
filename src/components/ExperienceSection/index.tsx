@@ -13,6 +13,8 @@ const ExperienceSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: ${p => p.theme.spacing[2]};
+  margin-top: ${p => p.theme.spacing[2]};
   width: 100%;
 `;
 

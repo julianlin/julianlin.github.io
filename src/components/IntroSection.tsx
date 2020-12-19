@@ -8,6 +8,7 @@ const IntroSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: ${p => p.theme.spacing[4]};
   width: 100%;
 `;
 

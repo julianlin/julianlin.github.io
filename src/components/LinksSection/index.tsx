@@ -7,7 +7,13 @@ const LinksSectionContainer = styled.section`
   color: ${p => p.theme.colors.contrast};
   display: flex;
   flex-direction: column;
+  padding-bottom: ${p => p.theme.spacing[4]};
+  padding-top: ${p => p.theme.spacing[4]};
   width: 100%;
+
+  li {
+    margin-bottom: ${p => p.theme.spacing[2]};
+  }
 `;
 
 const LinksSection = (props: any) => {
