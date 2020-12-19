@@ -55,10 +55,10 @@ const Navigation = (props: any) => {
         <NavItem onClick={() => onClickNavItem(profileRef)}>
           About Me
         </NavItem>
-        <NavItem onClick={() => onClickNavItem(profileRef)}>
+        <NavItem onClick={() => onClickNavItem(experienceRef)}>
           Experience
         </NavItem>
-        <NavItem onClick={() => onClickNavItem(profileRef)}>
+        <NavItem onClick={() => onClickNavItem(linksRef)}>
           Links
         </NavItem>
       </NavItems>
