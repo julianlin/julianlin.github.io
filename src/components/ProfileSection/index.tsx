@@ -38,6 +38,8 @@ const Summary = styled.div`
   flex-direction: column;
   line-height: 2rem;
   padding-bottom: ${p => p.theme.spacing[4]};
+  padding-left: ${p => p.theme.spacing[2]};
+  padding-right: ${p => p.theme.spacing[2]};
   text-align: center;
 
   h3 {
