@@ -21,7 +21,12 @@ function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <AppContainer ref={pageRef}>
-        <Navigation pageRef={pageRef} profileRef={profileRef} />
+        <Navigation
+          experienceRef={experienceRef}
+          pageRef={pageRef}
+          profileRef={profileRef}
+          linksRef={linksRef}
+        />
         <IntroSection />
         <ProfileSection sectionRef={profileRef} />
         <ExperienceSection sectionRef={experienceRef} />
