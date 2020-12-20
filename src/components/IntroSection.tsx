@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Photo from '../assets/photo.jpeg';
+import Photo from '../assets/photo.jpg';
 
 const IntroSectionContainer = styled.section`
   align-items: center;
@@ -11,6 +11,10 @@ const IntroSectionContainer = styled.section`
   justify-content: center;
   margin-bottom: ${p => p.theme.spacing[4]};
   width: 100%;
+
+  img {
+    border-radius: 50%;
+  }
 `;
 
 const Name = styled.h1`

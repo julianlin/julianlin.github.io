@@ -9,8 +9,9 @@ import ProfileSection from './components/ProfileSection';
 import Modal from './components/Modal';
 
 const AppContainer = styled.div`
-  width: 100%;
   height: 1000px;
+  min-width: 300px;
+  width: 100%;
 `;
 
 function App() {

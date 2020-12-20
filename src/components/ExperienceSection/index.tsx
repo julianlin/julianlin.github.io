@@ -7,9 +7,11 @@ const ContentWrapper = styled.div`
   border: 1px solid ${p => p.theme.colors.light};
   border-radius: 12px;
   max-width: 1200px;
-  padding: ${p => p.theme.spacing[3]};
+  padding: ${p => p.theme.spacing[2]};
+  margin: ${p => p.theme.spacing[2]};
 
   @media only screen and (min-width: ${p => p.theme.breakpoints.medium}) {
+    padding: ${p => p.theme.spacing[3]};
     width: 100%;
   }
 `;
