@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, RefObject } from 'react';
 import styled from 'styled-components';
 
 import Column from './Column';
@@ -62,27 +62,63 @@ const ProfileSectionContainer = styled.section`
   width: 100%;
 `;
 
-const ProfileSection = (props: any) => {
-  const { sectionRef } = props;
+type ProfileSectionType = {
+  sectionRef: RefObject<HTMLElement>;
+  setDisplayVideo: any;
+}
+
+const ProfileSection: FC<ProfileSectionType> = props => {
+  const { sectionRef, setDisplayVideo } = props;
 
   return (
     <ProfileSectionContainer ref={sectionRef}>
       <Summary>
         <h3>Hi, I'm Julian. Nice to meet you.</h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <p>
+          I've been a software engineer for over 4 years and have worked on a
+          variety of projects including annotation tools for machine learning,
+          an educational website for children, and SaaS for real estate.
+          I'm currently on the front-end team at WealthPark in Tokyo, Japan.
+        </p>
       </Summary>
       <Columns>
         <Column
           icon={<FrontEndIcon />}
+          sections={
+            [
+              ['Languages', ['Javascript', 'Typescript', 'HTML', 'CSS', 'SQL', 'Python']],
+              ['Libraries', ['React', 'GraphQL', 'styled-components', 'Bootstrap']]
+            ]
+          }
           title='Front-end Development'
         />
         <Column
           icon={<DesignAndTechIcon />}
-          title='Tools and Technologies'
+          sections={
+            [
+              ['Frameworks', ['Express', 'Next.js']],
+              ['Tools', ['GitHub', 'GitLab', 'Invision']]
+            ]
+          }
+          title='Dev Tools and Technologies'
          />
         <Column
           icon={<OtherSkillsIcon />}
-          title='Other Skills'
+          sections={
+            [
+              ['Tools', ['Invision', 'Jira', 'Confluence']],
+              [
+                'Other Skills and Achievements',
+                [
+                  'Japanese(JLPT N1)',
+                  '2 years exp as manager',
+                   ['Gold Medalist in Wushu', 'http://cmat.calwushu.com/cmat19results.html'],
+                   ['Can squat over 400lb', setDisplayVideo]
+                ]
+              ]
+            ]
+          }
+          title='Everything Else'
         />
       </Columns>
     </ProfileSectionContainer>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import photo from '../assets/photo.jpeg';
+
+import Photo from '../assets/photo.jpeg';
 
 const IntroSectionContainer = styled.section`
   align-items: center;
@@ -26,7 +27,7 @@ const IntroSection = () => {
     <IntroSectionContainer>
       <Name>Julian Lin</Name>
       <Title>Front-end Developer</Title>
-      <img src={photo} />
+      <img src={Photo} />
     </IntroSectionContainer>
   )
 };
