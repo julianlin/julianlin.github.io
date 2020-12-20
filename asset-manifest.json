@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/static/js/main.93ea0644.chunk.js",
+    "main.js.map": "/static/js/main.93ea0644.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.27122dc1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.27122dc1.js.map",
+    "static/js/2.2e187313.chunk.js": "/static/js/2.2e187313.chunk.js",
+    "static/js/2.2e187313.chunk.js.map": "/static/js/2.2e187313.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.2e187313.chunk.js.LICENSE.txt": "/static/js/2.2e187313.chunk.js.LICENSE.txt",
+    "static/media/design-and-technology-icon.5a16f311.svg": "/static/media/design-and-technology-icon.5a16f311.svg",
+    "static/media/front-end-development-icon.5aa1bf03.svg": "/static/media/front-end-development-icon.5aa1bf03.svg",
+    "static/media/open-icon.65e057b2.svg": "/static/media/open-icon.65e057b2.svg",
+    "static/media/other-skills-icon.11807604.svg": "/static/media/other-skills-icon.11807604.svg",
+    "static/media/squat.e8c01a71.mp4": "/static/media/squat.e8c01a71.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27122dc1.js",
+    "static/js/2.2e187313.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.93ea0644.chunk.js"
+  ]
+}
