@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, RefObject } from 'react';
 import styled from 'styled-components';
 
 import Company from './Company';
@@ -26,7 +26,11 @@ const ExperienceSectionContainer = styled.section`
   width: 100%;
 `;
 
-const ExperienceSection = (props: any) => {
+type ExperienceSectionType = {
+  sectionRef: RefObject<HTMLElement>;
+};
+
+const ExperienceSection = props => {
   const { sectionRef } = props;
 
   return (
