@@ -40,6 +40,7 @@ const ExperienceSection = (props: any) => {
             {
               description: [
                 'Implement responsive web applications(both internal and SaaS) from concept to deployment',
+                'Design applications to work well in multiple languages and browsers',
                 'Assess UI/UX designs for technical feasibility',
                 'Tech stack: Javascript, Typescript, React, GraphQL, Apollo, Kubernetes, GitLab CI/CD'
               ],
