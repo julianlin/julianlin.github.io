@@ -14,7 +14,7 @@ const AppContainer = styled.div`
 `;
 
 function App() {
-  const [displayModal, setDisplayModal] = useState(true);
+  const [displayModal, setDisplayModal] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);

@@ -1,21 +1,80 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
+import {ReactComponent as OpenIcon}
+  from '../../assets/open-icon.svg';
+
 const CompanyContainer = styled.div`
+  color: ${p => p.theme.colors.text};
+
+  a {
+    align-items: center;
+    color: ${p => p.theme.colors.text};
+    display: flex;
+    text-decoration: none;
+
+    &:visited: {
+      color: ${p => p.theme.colors.text};
+    }
+
+    &:hover {
+      color: ${p => p.theme.colors.light};
+
+      svg {
+        fill: ${p => p.theme.colors.light};
+      }
+    }
+
+    svg {
+      cursor: pointer;
+      fill: ${p => p.theme.colors.text};
+      height: 1rem;
+      padding-left: ${p => p.theme.spacing[1]};
+      width: 1rem;
+    }
+  }
+
   div {
     margin-bottom: ${p => p.theme.spacing[1]};
   }
+
+  h3 {
+    color: black;
+  }
 `;
 
-const Company = () => {
+type CompanyType = {
+  companyName: string;
+  link: string;
+  positions: any;
+};
+
+const Company: FC<CompanyType> = props => {
+  const { companyName, link, positions } = props;
+
   return (
     <CompanyContainer>
-      <h3>Position</h3>
-      <div>Company</div>
-      <div>Jan 2020 - Dec 2020</div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+      {
+        positions.map((position: any) => {
+          return (
+            <div>
+              <h3>{position.name}</h3>
+              <a href={link} target='_blank_'>
+                {companyName}
+                <OpenIcon />
+              </a>
+              <div>Jan 2020 - Dec 2020</div>
+              <ul>
+                {
+                  position.description.map((item: string) =>
+                    <li>{item}</li>
+                  )
+                }
+              </ul>
+            </div>
+          )
+        })
+      }
     </CompanyContainer>
   )
 };

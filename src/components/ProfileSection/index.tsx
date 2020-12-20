@@ -112,7 +112,7 @@ const ProfileSection: FC<ProfileSectionType> = props => {
                 [
                   'Japanese(JLPT N1)',
                   '2 years exp as manager',
-                   ['Gold Medalist in Wushu', 'http://cmat.calwushu.com/cmat19results.html'],
+                   ['Gold medalist in Wushu', 'http://cmat.calwushu.com/cmat19results.html'],
                    ['Can squat over 400lb', setDisplayVideo]
                 ]
               ]
