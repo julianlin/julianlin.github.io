@@ -45,12 +45,13 @@ const CompanyContainer = styled.div`
 
 type CompanyType = {
   companyName: string;
+  date: string;
   link: string;
   positions: any;
 };
 
 const Company: FC<CompanyType> = props => {
-  const { companyName, link, positions } = props;
+  const { companyName, date, link, positions } = props;
 
   return (
     <CompanyContainer>
@@ -63,7 +64,7 @@ const Company: FC<CompanyType> = props => {
                 {companyName}
                 <OpenIcon />
               </a>
-              <div>Jan 2020 - Dec 2020</div>
+              <div>{date}</div>
               <ul>
                 {
                   position.description.map((item: string) =>

@@ -30,7 +30,7 @@ type ExperienceSectionType = {
   sectionRef: RefObject<HTMLElement>;
 };
 
-const ExperienceSection = props => {
+const ExperienceSection: FC<ExperienceSectionType> = props => {
   const { sectionRef } = props;
 
   return (
@@ -39,6 +39,7 @@ const ExperienceSection = props => {
         <h2>Experience</h2>
         <Company
           companyName='WealthPark'
+          date='Jan 2020 - Present'
           link='https://wealth-park.com/en/'
           positions={[
             {
@@ -54,6 +55,7 @@ const ExperienceSection = props => {
         />
         <Company
           companyName='Santa Clara University'
+          date='Jun 2019 - Dec 2020'
           link='https://ywca-sv.org/curated-pathways-to-innovation/'
           positions={[
             {
@@ -68,6 +70,7 @@ const ExperienceSection = props => {
         />
         <Company
           companyName={'Drive.ai'}
+          date={'July 2017 - Jun 2019'}
           link='https://en.wikipedia.org/wiki/Drive.ai'
           positions={[
             {
