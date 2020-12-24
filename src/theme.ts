@@ -8,6 +8,7 @@ export const defaultTheme: DefaultTheme = {
   colors: {
     contrast: '#ffffff',
     dark: '#002884',
+    darkText: '#000000',
     light: '#757ce8',
     modalBackground: 'rgba(0, 0, 0, 0.8);',
     primary: '#3f50b5',

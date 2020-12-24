@@ -2,6 +2,7 @@ import React, { FC, RefObject } from 'react';
 import styled from 'styled-components';
 
 import Company from './Company';
+import Education from './Education';
 
 const ContentWrapper = styled.div`
   border: 1px solid ${p => p.theme.colors.light};
@@ -47,7 +48,7 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
                 'Implement responsive web applications(both internal and SaaS) from concept to deployment',
                 'Design applications to work well in multiple languages and browsers',
                 'Assess UI/UX designs for technical feasibility',
-                'Tech stack: Javascript, Typescript, React, GraphQL, Apollo, Kubernetes, GitLab CI/CD'
+                'Tech stack: Javascript, Typescript, React, GraphQL, Apollo, Kubernetes, GitLab CI/CD, AWS'
               ],
               name: 'Software Engineer'
             }
@@ -69,8 +70,8 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
           ]}
         />
         <Company
-          companyName={'Drive.ai'}
-          date={'July 2017 - Jun 2019'}
+          companyName='Drive.ai'
+          date='July 2017 - Jun 2019'
           link='https://en.wikipedia.org/wiki/Drive.ai'
           positions={[
             {
@@ -78,11 +79,24 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
                 'Developed and maintained data annotation tools used to create data sets for machine learning with over 100,000 images',
                 'Worked closely with the data annotation team to optimize user experience and output speed',
                 'Developed and maintained various web and desktop applications for both internal and external use',
-                'Tech stack: Python, Javascript, MySQL, Flask, React, Redux, Electron, Kubernetes, Jenkins'
+                'Tech stack: Python, Javascript, MySQL, Flask, React, Redux, Electron, Kubernetes, Jenkins, AWS'
               ],
               name: 'Software Engineer'
             }
           ]}
+        />
+      </ContentWrapper>
+      <ContentWrapper>
+        <h2>Education</h2>
+        <Education
+          date='2016-2019'
+          degree='M.S., Computer Science and Engineering'
+          institution='Santa Clara University, Santa Clara, CA'
+        />
+        <Education
+          date='2011-2015'
+          degree='B.S., Computer Engineering'
+          institution='University of California, Davis, CA'
         />
       </ContentWrapper>
     </ExperienceSectionContainer>

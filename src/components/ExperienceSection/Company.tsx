@@ -39,7 +39,7 @@ const CompanyContainer = styled.div`
   }
 
   h3 {
-    color: black;
+    color: ${p => p.theme.colors.darkText};
   }
 `;
 
