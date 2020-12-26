@@ -11,26 +11,39 @@ const LinksSectionContainer = styled.section`
   padding-top: ${p => p.theme.spacing[2]};
   width: 100%;
 
+  ul {
+    padding: 0;
+  }
+
   li {
     margin: ${p => p.theme.spacing[2]};
     margin-top: 0;
 
     a {
       align-items: center;
+      border-radius: 4px;
       color: ${p => p.theme.colors.contrast};
       display: flex;
+      font-weight: bold;
+      justify-content: center;
+      padding: ${p => p.theme.spacing[1]};
       text-decoration: none;
+      width: ${p => p.theme.spacing[4]};
 
-      &:visited: {
-        color: ${p => p.theme.colors.contrast};
+      &:active {
+        border: 1px solid ${p => p.theme.colors.contrast};
       }
 
       &:hover {
-        color: ${p => p.theme.colors.light};
+        background-color: ${p => p.theme.colors.light};
 
         svg {
           fill: ${p => p.theme.colors.light};
         }
+      }
+
+      &:visited: {
+        color: ${p => p.theme.colors.contrast};
       }
     }
   }
@@ -52,7 +65,7 @@ const LinksSection = (props: any) => {
       <ul>
         <li>
           <a href='https://github.com/julianlin/julianlin.github.io/tree/dev' target='_blank_'>
-            Source Code
+            Source
           </a>
         </li>
         <li>
