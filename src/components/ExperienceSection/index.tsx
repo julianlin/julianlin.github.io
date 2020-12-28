@@ -45,10 +45,10 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
           positions={[
             {
               description: [
-                'Implement responsive web applications(both internal and SaaS) from concept to deployment',
-                'Design applications to work well in multiple languages and browsers',
-                'Assess UI/UX designs for technical feasibility',
-                'Tech stack: Javascript, Typescript, React, GraphQL, Apollo, Kubernetes, GitLab CI/CD, AWS'
+                'Develop asset management and administration platforms for investors and the largest property management companies in Japan',
+                'Implement responsive web applications that work in multiple languages and browsers using Javascript, Typescript, React, HTML, CSS, styled-components, GraphQL, Apollo',
+                'Assess UI/UX designs for usability and technical feasibility',
+                'Deploy and manage applications using Kubernetes, GitLab CI/CD, AWS'
               ],
               name: 'Software Engineer'
             }
@@ -62,8 +62,8 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
             {
               description: [
                 'Worked on the Curated Pathways to Innovation(CPI) project which is a website that aims to set women and underrepresented minorities on the path to STEM Careers and has over 2000 users',
-                'Worked with teachers and other members of the CPI team to create features to increase engagement of student users',
-                'Tech stack: PHP, Javascript, MySQL, Laravel, jQuery, Ajax, Bootstrap'
+                'Worked with teachers to create features to increase engagement of student users',
+                'Developed features for and maintained the CPI web application using PHP, Javascript, MySQL, Laravel, jQuery, Ajax, Bootstrap'
               ],
               name: 'Full Stack Software Engineer'
             }
@@ -76,10 +76,10 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
           positions={[
             {
               description: [
-                'Developed and maintained data annotation tools used to create data sets for machine learning with over 100,000 images',
+                "Developed data annotation tools used to create data sets for machine learning with 100,000's of images using Python, Javascript, MySQL, Flask, React, Redux, Electron, Kubernetes, AWS",
+                'Maintained and developed features for 3D bounding box and lane annotation tools',
                 'Worked closely with the data annotation team to optimize user experience and output speed',
-                'Developed and maintained various web and desktop applications for both internal and external use',
-                'Tech stack: Python, Javascript, MySQL, Flask, React, Redux, Electron, Kubernetes, Jenkins, AWS'
+                'Developed various web and desktop applications for internal and external use including data set viewers, metrics dashboards, and user management dashboards'
               ],
               name: 'Software Engineer'
             }
