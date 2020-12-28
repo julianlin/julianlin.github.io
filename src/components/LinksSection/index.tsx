@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, RefObject } from 'react';
 import styled from 'styled-components';
 
 const LinksSectionContainer = styled.section`
@@ -56,28 +56,40 @@ const LinksSectionContainer = styled.section`
   }
 `;
 
-const LinksSection = (props: any) => {
+const Links = [
+  {
+    'url': 'https://github.com/julianlin/julianlin.github.io/tree/dev',
+    'text': 'Source'
+  },
+  {
+    'url': 'https://github.com/julianlin',
+    'text': 'GitHub'
+  },
+  {
+    'url': 'https://www.linkedin.com/in/julianlin1/',
+    'text': 'Linkedin'
+  }
+]
+
+type LinksSectionType = {
+  sectionRef: RefObject<HTMLElement>;
+}
+
+const LinksSection: FC<LinksSectionType> = props => {
   const { sectionRef } = props;
 
   return (
     <LinksSectionContainer ref={sectionRef}>
       <h2>Links</h2>
       <ul>
-        <li>
-          <a href='https://github.com/julianlin/julianlin.github.io/tree/dev' target='_blank_'>
-            Source
-          </a>
-        </li>
-        <li>
-          <a href='https://github.com/julianlin' target='_blank_'>
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href='https://www.linkedin.com/in/julianlin1/' target='_blank_'>
-            Linkedin
-          </a>
-        </li>
+        {Links.map(link => (
+          <li>
+            <a href={link.url} target="_blank_">
+              {link.text}
+            </a>
+          </li>
+        ))
+        }
       </ul>
     </LinksSectionContainer>
   )
