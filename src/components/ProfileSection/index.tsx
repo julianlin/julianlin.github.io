@@ -86,8 +86,8 @@ const ProfileSection: FC<ProfileSectionType> = props => {
           icon={<FrontEndIcon />}
           sections={
             [
-              ['Languages', ['Javascript', 'Typescript', 'HTML', 'CSS', 'SQL', 'Python']],
-              ['Libraries', ['React', 'GraphQL', 'styled-components', 'Bootstrap']]
+              ['Languages', ['Javascript', 'Typescript', 'HTML', 'CSS', 'SQL', 'Python', 'GraphQL']],
+              ['Libraries', ['React', 'Apollo', 'styled-components', 'Bootstrap']]
             ]
           }
           title='Front-end Development'
