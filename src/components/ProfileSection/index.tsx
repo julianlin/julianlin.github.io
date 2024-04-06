@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Column from './Column';
 import {ReactComponent as FrontEndIcon}
-  from '../../assets/front-end-development-icon.svg';
+from '../../assets/front-end-development-icon.svg';
 import {ReactComponent as DesignAndTechIcon}
   from '../../assets/design-and-technology-icon.svg';
 import {ReactComponent as OtherSkillsIcon}
@@ -54,6 +54,7 @@ const Summary = styled.div`
 const ProfileSectionContainer = styled.section`
   align-items: center;
   background-color: ${p => p.theme.colors.primary};
+  color: ${p => p.theme.colors.textSecondary};
   display: flex;
   flex-direction: column;
   justify-content: center;

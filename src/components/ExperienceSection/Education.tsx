@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const EducationContainer = styled.div`
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.textPrimary};
 
   div {
     margin-bottom: ${p => p.theme.spacing[1]};

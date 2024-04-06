@@ -5,7 +5,7 @@ import Photo from '../assets/photo.jpg';
 
 const IntroSectionContainer = styled.section`
   align-items: center;
-  color: ${p => p.theme.colors.primary};
+  color: ${p => p.theme.colors.textPrimary};
   display: flex;
   flex-direction: column;
   justify-content: center;

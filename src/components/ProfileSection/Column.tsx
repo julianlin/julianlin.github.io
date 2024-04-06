@@ -12,6 +12,7 @@ const ColumnContainer = styled.div`
   text-align: center;
 
   h3 {
+    color: ${p => p.theme.colors.textPrimary};
     font-size: 1.5rem;
     margin-bottom: ${p => p.theme.spacing[1]};
   }
@@ -24,7 +25,7 @@ const ColumnContainer = styled.div`
   }
 
   ul {
-    color: ${p => p.theme.colors.text};
+    color: ${p => p.theme.colors.textPrimary};
     line-height: 2rem;
     list-style-type: none;
     padding: 0;
@@ -37,7 +38,7 @@ const ColumnContainer = styled.div`
       text-decoration: none;
 
       &:visited {
-        color: ${p => p.theme.colors.text};
+        color: ${p => p.theme.colors.textPrimary};
       }
 
       &:hover {
@@ -52,7 +53,7 @@ const ColumnContainer = styled.div`
 
     svg {
       cursor: pointer;
-      fill: ${p => p.theme.colors.text};
+      fill: ${p => p.theme.colors.secondary};
       height: 1rem;
       padding-left: ${p => p.theme.spacing[1]};
       width: 1rem;
@@ -60,7 +61,7 @@ const ColumnContainer = styled.div`
   }
 
   svg {
-    fill: ${p => p.theme.colors.primary};
+    fill: ${p => p.theme.colors.secondary};
     height: ${p => p.theme.spacing[4]};
     width: ${p => p.theme.spacing[4]};
   }

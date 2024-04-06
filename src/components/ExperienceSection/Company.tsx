@@ -5,16 +5,16 @@ import {ReactComponent as OpenIcon}
   from '../../assets/open-icon.svg';
 
 const CompanyContainer = styled.div`
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.textPrimary};
 
   a {
     align-items: center;
-    color: ${p => p.theme.colors.text};
+    color: ${p => p.theme.colors.textPrimary};
     display: flex;
     text-decoration: none;
 
     &:visited: {
-      color: ${p => p.theme.colors.text};
+      color: ${p => p.theme.colors.textPrimary};
     }
 
     &:hover {
@@ -27,7 +27,7 @@ const CompanyContainer = styled.div`
 
     svg {
       cursor: pointer;
-      fill: ${p => p.theme.colors.text};
+      fill: ${p => p.theme.colors.textPrimary};
       height: 1rem;
       padding-left: ${p => p.theme.spacing[1]};
       width: 1rem;
