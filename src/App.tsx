@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react';
-import defaultTheme from './theme'
-import styled, { ThemeProvider } from 'styled-components';
+import {defaultTheme as defaultTheme1} from './theme'
+import styled, { ThemeProvider as ThemeProviderOld } from 'styled-components';
 import ExperienceSection from './components/ExperienceSection';
 import LinksSection from './components/LinksSection';
 import IntroSection from './components/IntroSection';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection';
 import Modal from './components/Modal';
+import { createTheme, ThemeProvider } from "@mui/material"
+import { theme } from './defaultTheme';
 
 const AppContainer = styled.div`
   height: 1000px;
@@ -22,27 +24,29 @@ function App() {
   const linksRef = useRef<HTMLElement>(null);
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <AppContainer ref={pageRef}>
-        <Navigation
-          experienceRef={experienceRef}
-          pageRef={pageRef}
-          profileRef={profileRef}
-          linksRef={linksRef}
-        />
-        <IntroSection />
-        <ProfileSection
-          sectionRef={profileRef}
-          setDisplayVideo={setDisplayModal}
-        />
-        <ExperienceSection sectionRef={experienceRef} />
-        <LinksSection sectionRef={linksRef} />
-        <Modal
-          display={displayModal}
-          setDisplayModal={setDisplayModal}
-        />
-      </AppContainer>
-    </ThemeProvider>
+    <ThemeProviderOld theme={defaultTheme1}>
+      <ThemeProvider theme={createTheme(theme)}>
+        <AppContainer ref={pageRef}>
+          <Navigation
+            experienceRef={experienceRef}
+            pageRef={pageRef}
+            profileRef={profileRef}
+            linksRef={linksRef}
+          />
+          <IntroSection />
+          <ProfileSection
+            sectionRef={profileRef}
+            setDisplayVideo={setDisplayModal}
+          />
+          <ExperienceSection sectionRef={experienceRef} />
+          <LinksSection sectionRef={linksRef} />
+          <Modal
+            display={displayModal}
+            setDisplayModal={setDisplayModal}
+          />
+        </AppContainer>
+      </ThemeProvider>
+    </ThemeProviderOld>
   );
 }
 

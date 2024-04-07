@@ -1,33 +1,10 @@
 import React, { useState }from 'react';
 import styled from 'styled-components';
 
-import {ReactComponent as CloseIcon} from '../assets/close-icon.svg';
-import {ReactComponent as MenuIcon} from '../assets/menu-icon.svg';
+import {ReactComponent as CloseIcon} from '../../assets/close-icon.svg';
+import {ReactComponent as MenuIcon} from '../../assets/menu-icon.svg';
 
-const MobileNav = styled.div`
-  width: 100%;
-
-  div {
-    float: left;
-
-    svg {
-      cursor: pointer;
-      fill: ${p => p.theme.colors.primary};
-      height: 40px;
-      padding: 0;
-      width: 40px;
-
-      &:hover {
-        fill: ${p => p.theme.colors.dark};
-      }
-    }
-
-  }
-
-  @media only screen and (min-width: ${p => p.theme.breakpoints.small}) {
-    display: none;
-  }
-`;
+import { MobileNav } from './styles';
 
 type MobileNavItemsType = {
   display: boolean;
