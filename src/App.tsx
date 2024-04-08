@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react';
 import {defaultTheme as defaultTheme1} from './theme'
 import styled, { ThemeProvider as ThemeProviderOld } from 'styled-components';
 import ExperienceSection from './components/ExperienceSection';
-import LinksSection from './components/LinksSection';
+import LinksSection from './components/LinksSection/LinksSection';
 import IntroSection from './components/IntroSection';
 import Navigation from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection';
 import Modal from './components/Modal';
-import { createTheme, ThemeProvider } from "@mui/material"
+import { createTheme, ThemeProvider } from '@mui/material';
 import { theme } from './defaultTheme';
 
 const AppContainer = styled.div`

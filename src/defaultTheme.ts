@@ -19,3 +19,11 @@ export const breakpoints = {
   medium: '768px',
   large: '1200px'
 }
+
+export const spacing = {
+  xs: '4px',
+  s: '8px',
+  m: '16px',
+  l: '32px',
+  xl: '64px',
+};
