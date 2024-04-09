@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import {defaultTheme as defaultTheme1} from './theme'
 import styled, { ThemeProvider as ThemeProviderOld } from 'styled-components';
-import ExperienceSection from './components/ExperienceSection';
+import ExperienceSection from './components/ExperienceSection/ExperienceSection';
 import LinksSection from './components/LinksSection/LinksSection';
 import IntroSection from './components/IntroSection';
 import Navigation from './components/Navigation/Navigation';

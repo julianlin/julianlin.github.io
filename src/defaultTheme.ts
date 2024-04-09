@@ -1,4 +1,12 @@
 export const theme = {
+  palette: {
+    primary: {
+      main: '#434c5e',
+    },
+    secondary: {
+      main: '#81a1c1',
+    },
+  },
   colors: {
     contrast: '#ffffff',
     dark: '#002884',

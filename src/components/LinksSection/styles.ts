@@ -3,7 +3,7 @@ import { breakpoints, spacing, theme } from '../../defaultTheme';
 
 export const LinksSectionContainer = styled.section`
 align-items: center;
-background-color: ${theme.colors.primary};
+background-color: ${theme.palette.primary.main};
 color: ${theme.colors.contrast};
 display: flex;
 flex-direction: column;

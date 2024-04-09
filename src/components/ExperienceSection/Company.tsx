@@ -1,47 +1,10 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
 
 import {ReactComponent as OpenIcon}
   from '../../assets/open-icon.svg';
 
-const CompanyContainer = styled.div`
-  color: ${p => p.theme.colors.textPrimary};
+import { CompanyContainer } from './styles';
 
-  a {
-    align-items: center;
-    color: ${p => p.theme.colors.textPrimary};
-    display: flex;
-    text-decoration: none;
-
-    &:visited: {
-      color: ${p => p.theme.colors.textPrimary};
-    }
-
-    &:hover {
-      color: ${p => p.theme.colors.light};
-
-      svg {
-        fill: ${p => p.theme.colors.light};
-      }
-    }
-
-    svg {
-      cursor: pointer;
-      fill: ${p => p.theme.colors.textPrimary};
-      height: 1rem;
-      padding-left: ${p => p.theme.spacing[1]};
-      width: 1rem;
-    }
-  }
-
-  div {
-    margin-bottom: ${p => p.theme.spacing[1]};
-  }
-
-  h3 {
-    color: ${p => p.theme.colors.darkText};
-  }
-`;
 
 type CompanyType = {
   companyName: string;
