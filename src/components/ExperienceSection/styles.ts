@@ -62,3 +62,15 @@ export const ExperienceSectionContainer = styled.section`
   margin-top: ${theme.spacing[2]};
   width: 100%;
 `;
+
+export const EducationContainer = styled.div`
+  color: ${theme.colors.textPrimary};
+
+  div {
+    margin-bottom: ${theme.spacing[1]};
+  }
+
+  h3 {
+    color: ${theme.colors.darkText};
+  }
+`;

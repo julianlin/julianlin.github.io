@@ -1,17 +1,6 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import { FC } from 'react';
+import { EducationContainer } from './styles'
 
-const EducationContainer = styled.div`
-  color: ${p => p.theme.colors.textPrimary};
-
-  div {
-    margin-bottom: ${p => p.theme.spacing[1]};
-  }
-
-  h3 {
-    color: ${p => p.theme.colors.darkText};
-  }
-`;
 
 type EducationType = {
   date: string;

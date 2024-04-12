@@ -1,5 +1,5 @@
-import React, { FC, RefObject } from 'react';
-import styled from 'styled-components';
+import { FC, RefObject } from 'react';
+import { Columns, ProfileSectionContainer, Summary  } from './styles';
 
 import Column from './Column';
 import {ReactComponent as FrontEndIcon}
@@ -8,60 +8,6 @@ import {ReactComponent as DesignAndTechIcon}
   from '../../assets/design-and-technology-icon.svg';
 import {ReactComponent as OtherSkillsIcon}
   from '../../assets/other-skills-icon.svg';
-
-const Columns = styled.div`
-  background-color: white;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  margin: ${p => p.theme.spacing[2]};
-  max-width: 1200px;
-
-  >div:not(:last-child) {
-    border-bottom: 1px solid ${p => p.theme.colors.light};
-  }
-
-  @media only screen and (min-width: ${p => p.theme.breakpoints.medium}) {
-    >div:not(:last-child) {
-      border-bottom: none;
-      border-right: 1px solid ${p => p.theme.colors.light};
-    }
-    flex-direction: row;
-    width: 100%;
-  }
-`;
-
-const Summary = styled.div`
-  align-items: center;
-  color: ${p => p.theme.colors.contrast};
-  display: flex;
-  flex-direction: column;
-  line-height: 2rem;
-  padding-bottom: ${p => p.theme.spacing[4]};
-  padding-left: ${p => p.theme.spacing[2]};
-  padding-right: ${p => p.theme.spacing[2]};
-  text-align: center;
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  @media only screen and (min-width: ${p => p.theme.breakpoints.medium}) {
-    max-width: 640px;
-  }
-`;
-
-const ProfileSectionContainer = styled.section`
-  align-items: center;
-  background-color: ${p => p.theme.colors.primary};
-  color: ${p => p.theme.colors.textSecondary};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: ${p => p.theme.spacing[4]};
-  padding-top: ${p => p.theme.spacing[4]};
-  width: 100%;
-`;
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
