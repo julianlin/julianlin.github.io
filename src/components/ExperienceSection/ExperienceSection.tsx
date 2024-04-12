@@ -1,31 +1,8 @@
 import React, { FC, RefObject } from 'react';
-import styled from 'styled-components';
+import { ContentWrapper, ExperienceSectionContainer } from './styles'
 
 import Company from './Company';
 import Education from './Education';
-
-const ContentWrapper = styled.div`
-  border: 1px solid ${p => p.theme.colors.light};
-  border-radius: 12px;
-  max-width: 1200px;
-  padding: ${p => p.theme.spacing[2]};
-  margin: ${p => p.theme.spacing[2]};
-
-  @media only screen and (min-width: ${p => p.theme.breakpoints.medium}) {
-    padding: ${p => p.theme.spacing[3]};
-    width: 100%;
-  }
-`;
-
-const ExperienceSectionContainer = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: ${p => p.theme.spacing[2]};
-  margin-top: ${p => p.theme.spacing[2]};
-  width: 100%;
-`;
 
 type ExperienceSectionType = {
   sectionRef: RefObject<HTMLElement>;

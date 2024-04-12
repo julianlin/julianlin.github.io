@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { theme } from '../defaultTheme';
 
 import Video from '../assets/squat.mp4';
 
@@ -12,7 +13,7 @@ const ContentWrapper = styled.div`
 `;
 
 const ModalContainer = styled.div`
-  background-color: ${p => p.theme.colors.modalBackground};
+  background-color: ${theme.colors.modalBackground};
   height: 100%;
   position: fixed;
   top: 0;
