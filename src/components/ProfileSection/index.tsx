@@ -1,9 +1,8 @@
 import { FC, RefObject } from 'react';
 import { Columns, ProfileSectionContainer, Summary  } from './styles';
+import CodeIcon from '@mui/icons-material/Code';
 
 import Column from './Column';
-import {ReactComponent as FrontEndIcon}
-from '../../assets/front-end-development-icon.svg';
 import {ReactComponent as DesignAndTechIcon}
   from '../../assets/design-and-technology-icon.svg';
 import {ReactComponent as OtherSkillsIcon}
@@ -30,7 +29,7 @@ const ProfileSection: FC<ProfileSectionType> = props => {
       </Summary>
       <Columns>
         <Column
-          icon={<FrontEndIcon />}
+          icon={<CodeIcon />}
           sections={
             [
               ['Languages', ['Javascript', 'Typescript', 'HTML', 'CSS', 'SQL', 'Python', 'GraphQL']],

@@ -1,13 +1,13 @@
 import { IntroSectionContainer, Name } from './styles';
 
-import Photo from '../../assets/photo.jpg';
+import ProfilePhoto from '../../assets/profile-photo.jpg';
 
 const IntroSection = () => {
   return (
     <IntroSectionContainer>
       <Name>Julian Lin</Name>
       <h2>Front-end Developer</h2>
-      <img src={Photo} />
+      <img alt="Julian Lin" src={ProfilePhoto} />
     </IntroSectionContainer>
   )
 };
