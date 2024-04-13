@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { theme } from '../defaultTheme';
+import { theme } from '../theme';
 
 import Video from '../assets/squat.mp4';
 

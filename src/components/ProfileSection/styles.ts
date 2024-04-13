@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoints, theme } from '../../defaultTheme';
+import { breakpoints, theme } from '../../theme';
 
 export const ColumnContainer = styled.div`
   align-items: center;

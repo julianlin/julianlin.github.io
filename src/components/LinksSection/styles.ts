@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoints, spacing, theme } from '../../defaultTheme';
+import { breakpoints, spacing, theme } from '../../theme';
 
 export const LinksSectionContainer = styled.section`
 align-items: center;

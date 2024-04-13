@@ -1,8 +1,5 @@
-import { useState }from 'react';
-
-import {ReactComponent as CloseIcon} from '../../assets/close-icon.svg';
-import {ReactComponent as MenuIcon} from '../../assets/menu-icon.svg';
-
+import { Close, Menu } from '@mui/icons-material';
+import { useState } from 'react';
 import { MobileNav, MobileNavItems, NavItem, NavItems, NavigationContainer } from './styles';
 
 const Navigation = (props: any) => {
@@ -35,8 +32,8 @@ const Navigation = (props: any) => {
         <div>
           {
             menuOpen
-              ? <CloseIcon onClick={() => setMenuOpen(false)}/>
-              : <MenuIcon onClick={() => setMenuOpen(true)}/>
+              ? <Close onClick={() => setMenuOpen(false)}/>
+              : <Menu onClick={() => setMenuOpen(true)}/>
           }
           <MobileNavItems display={menuOpen}>
             {

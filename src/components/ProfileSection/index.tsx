@@ -1,12 +1,8 @@
-import { FC, RefObject } from 'react';
-import { Columns, ProfileSectionContainer, Summary  } from './styles';
+import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
-
+import { FC, RefObject } from 'react';
 import Column from './Column';
-import {ReactComponent as DesignAndTechIcon}
-  from '../../assets/design-and-technology-icon.svg';
-import {ReactComponent as OtherSkillsIcon}
-  from '../../assets/other-skills-icon.svg';
+import { Columns, ProfileSectionContainer, Summary } from './styles';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -39,7 +35,7 @@ const ProfileSection: FC<ProfileSectionType> = props => {
           title='Front-end Development'
         />
         <Column
-          icon={<DesignAndTechIcon />}
+          icon={<Build />}
           sections={
             [
               ['Frameworks', ['Express', 'Next.js']],
@@ -49,7 +45,7 @@ const ProfileSection: FC<ProfileSectionType> = props => {
           title='Dev Tools and Technologies'
          />
         <Column
-          icon={<OtherSkillsIcon />}
+          icon={<Person />}
           sections={
             [
               ['Tools', ['Invision', 'Jira', 'Confluence']],

@@ -1,7 +1,5 @@
-import React, { FC } from 'react';
-
-import {ReactComponent as OpenIcon}
-  from '../../assets/open-icon.svg';
+import { FC } from 'react';
+import { OpenInNew } from '@mui/icons-material';
 
 import { CompanyContainer } from './styles';
 
@@ -25,7 +23,7 @@ const Company: FC<CompanyType> = props => {
               <h3>{position.name}</h3>
               <a href={link} target='_blank_'>
                 {companyName}
-                <OpenIcon />
+                <OpenInNew />
               </a>
               <div>{date}</div>
               <ul>

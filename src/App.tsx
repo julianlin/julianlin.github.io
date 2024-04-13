@@ -6,7 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection';
 import Modal from './components/Modal';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { theme } from './defaultTheme';
+import { theme } from './theme';
 import styled from '@emotion/styled';
 
 const AppContainer = styled.div`

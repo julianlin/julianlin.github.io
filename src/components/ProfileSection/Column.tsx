@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { ColumnContainer, VideoItem } from './styles';
-
-import {ReactComponent as OpenIcon}
-  from '../../assets/open-icon.svg';
+import { OpenInNew } from '@mui/icons-material';
 
 type ColumnType = {
   icon: any;
@@ -29,9 +27,9 @@ const Column: FC<ColumnType> = props => {
                       if (typeof(item[1]) === 'string') {
                         return (
                           <li>
-                            <a href={item[1]} target='_blank'>
+                            <a href={item[1]} rel="noreferrer" target='_blank'>
                               {item[0]}
-                              <OpenIcon />
+                              <OpenInNew />
                             </a>
                           </li>
                         );
@@ -39,7 +37,7 @@ const Column: FC<ColumnType> = props => {
                         return (
                           <VideoItem onClick={() => item[1](true)}>
                             {item[0]}
-                            <OpenIcon />
+                            <OpenInNew />
                           </VideoItem>
                         );
                       }

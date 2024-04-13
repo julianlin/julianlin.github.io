@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoints, theme } from '../../defaultTheme';
+import { breakpoints, theme } from '../../theme';
 
 export const MobileNav = styled.div`
   width: 100%;

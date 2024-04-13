@@ -48,7 +48,7 @@ const ExperienceSection: FC<ExperienceSectionType> = props => {
         />
         <Company
           companyName='Drive.ai'
-          date='July 2017 - Jun 2019'
+          date='July 2015 - Jun 2019'
           link='https://en.wikipedia.org/wiki/Drive.ai'
           positions={[
             {
