@@ -3,7 +3,7 @@ import ExperienceSection from './components/ExperienceSection/ExperienceSection'
 import LinksSection from './components/LinksSection/LinksSection';
 import IntroSection from './components/IntroSection/IntroSection';
 import Navigation from './components/Navigation/Navigation';
-import ProfileSection from './components/ProfileSection';
+import ProfileSection from './components/ProfileSection/ProfileSection';
 import Modal from './components/Modal';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { theme } from './theme';

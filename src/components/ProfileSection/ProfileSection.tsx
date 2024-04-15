@@ -3,6 +3,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import { FC, RefObject } from 'react';
 import Column from './Column';
 import { Columns, ProfileSectionContainer, Summary } from './styles';
+import { Typography } from '@mui/material';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -15,13 +16,13 @@ const ProfileSection: FC<ProfileSectionType> = props => {
   return (
     <ProfileSectionContainer ref={sectionRef}>
       <Summary>
-        <h3>Hi, I'm Julian. Nice to meet you.</h3>
-        <p>
+        <Typography component='p' variant='h4'>Hi, I'm Julian. Nice to meet you.</Typography>
+        <Typography>
           I've been a software engineer for over 4 years and have worked on a
           variety of projects including annotation tools for machine learning,
           an educational website for children, and SaaS for real estate.
           I'm currently on the front-end team at WealthPark in Tokyo, Japan.
-        </p>
+        </Typography>
       </Summary>
       <Columns>
         <Column

@@ -114,10 +114,6 @@ export const Summary = styled.div`
   padding-right: ${theme.spacing[2]};
   text-align: center;
 
-  h3 {
-    font-size: 2rem;
-  }
-
   @media only screen and (min-width: ${breakpoints.medium}) {
     max-width: 640px;
   }
