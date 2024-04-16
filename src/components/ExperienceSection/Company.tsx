@@ -1,20 +1,26 @@
-import { FC } from 'react';
 import { OpenInNew } from '@mui/icons-material';
+import { FC } from 'react';
 import { CompanyContainer } from './styles';
+import { Position } from './types';
 
-type CompanyType = {
+type CompanyProps = {
   companyName: string;
-  date: string;
+  startDate: string;
+  endDate: string;
   link: string;
-  positions: any;
+  positions: Position[];
 };
 
-const Company: FC<CompanyType> = (props) => {
-  const { companyName, date, link, positions } = props;
-
+export const Company: FC<CompanyProps> = ({
+  companyName,
+  startDate,
+  endDate,
+  link,
+  positions,
+}) => {
   return (
     <CompanyContainer>
-      {positions.map((position: any) => {
+      {positions.map((position: Position) => {
         return (
           <div>
             <h3>{position.name}</h3>
@@ -22,7 +28,9 @@ const Company: FC<CompanyType> = (props) => {
               {companyName}
               <OpenInNew />
             </a>
-            <div>{date}</div>
+            <div>
+              {startDate} - {endDate}
+            </div>
             <ul>
               {position.description.map((item: string) => (
                 <li>{item}</li>
@@ -34,5 +42,3 @@ const Company: FC<CompanyType> = (props) => {
     </CompanyContainer>
   );
 };
-
-export default Company;

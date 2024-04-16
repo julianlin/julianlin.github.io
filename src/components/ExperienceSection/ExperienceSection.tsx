@@ -1,6 +1,6 @@
 import React, { FC, RefObject } from 'react';
 import { ContentWrapper, ExperienceSectionContainer } from './styles';
-import Company from './Company';
+import { Company } from './Company';
 import Education from './Education';
 
 type ExperienceSectionType = {
@@ -16,7 +16,8 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
         <h2>Experience</h2>
         <Company
           companyName="WealthPark"
-          date="Jan 2020 - Present"
+          startDate="Jan 2020"
+          endDate="Present"
           link="https://wealth-park.com/en/"
           positions={[
             {
@@ -32,7 +33,8 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
         />
         <Company
           companyName="Santa Clara University"
-          date="Jun 2019 - Dec 2020"
+          startDate="Jun 2019"
+          endDate="Dec 2020"
           link="https://ywca-sv.org/curated-pathways-to-innovation/"
           positions={[
             {
@@ -47,7 +49,8 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
         />
         <Company
           companyName="Drive.ai"
-          date="July 2015 - Jun 2019"
+          startDate="July 2015"
+          endDate="Jun 2019"
           link="https://en.wikipedia.org/wiki/Drive.ai"
           positions={[
             {
