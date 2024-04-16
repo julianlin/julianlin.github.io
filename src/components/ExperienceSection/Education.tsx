@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { EducationContainer } from './styles'
-
+import { EducationContainer } from './styles';
 
 type EducationType = {
   date: string;
@@ -8,7 +7,7 @@ type EducationType = {
   institution: string;
 };
 
-const Education: FC<EducationType> = props => {
+const Education: FC<EducationType> = (props) => {
   const { date, degree, institution } = props;
 
   return (
@@ -17,7 +16,7 @@ const Education: FC<EducationType> = props => {
       <div>{institution}</div>
       <div>{date}</div>
     </EducationContainer>
-  )
+  );
 };
 
 export default Education;

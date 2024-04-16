@@ -25,7 +25,7 @@ type ModalType = {
   setDisplayModal: any;
 };
 
-const Modal: FC<ModalType> = props => {
+const Modal: FC<ModalType> = (props) => {
   const { display, setDisplayModal } = props;
 
   if (!display) {
@@ -35,10 +35,10 @@ const Modal: FC<ModalType> = props => {
   return (
     <ModalContainer>
       <ContentWrapper onClick={() => setDisplayModal(false)}>
-        <video controls autoPlay src={Video}  />
+        <video controls autoPlay src={Video} />
       </ContentWrapper>
     </ModalContainer>
-  )
+  );
 };
 
 export default Modal;

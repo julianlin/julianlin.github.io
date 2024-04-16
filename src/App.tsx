@@ -38,10 +38,7 @@ function App() {
         />
         <ExperienceSection sectionRef={experienceRef} />
         <LinksSection sectionRef={linksRef} />
-        <Modal
-          display={displayModal}
-          setDisplayModal={setDisplayModal}
-        />
+        <Modal display={displayModal} setDisplayModal={setDisplayModal} />
       </AppContainer>
     </ThemeProvider>
   );

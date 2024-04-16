@@ -9,7 +9,7 @@ const IntroSection = () => {
       <h2>Front-end Developer</h2>
       <img alt="Julian Lin" src={ProfilePhoto} />
     </IntroSectionContainer>
-  )
+  );
 };
 
 export default IntroSection;

@@ -45,7 +45,6 @@ export const ColumnContainer = styled.div`
           fill: ${theme.colors.light};
         }
       }
-
     }
 
     svg {
@@ -89,12 +88,12 @@ export const Columns = styled.div`
   margin: ${theme.spacing[2]};
   max-width: 1200px;
 
-  >div:not(:last-child) {
+  > div:not(:last-child) {
     border-bottom: 1px solid ${theme.colors.light};
   }
 
   @media only screen and (min-width: ${breakpoints.medium}) {
-    >div:not(:last-child) {
+    > div:not(:last-child) {
       border-bottom: none;
       border-right: 1px solid ${theme.colors.light};
     }

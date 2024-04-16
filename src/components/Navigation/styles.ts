@@ -31,7 +31,7 @@ type MobileNavItemsType = {
 
 export const MobileNavItems = styled.ul<MobileNavItemsType>`
   color: ${theme.colors.primary};
-  display: ${p => p.display ? 'block' : 'none'};
+  display: ${(p) => (p.display ? 'block' : 'none')};
   font-size: 1.5rem;
   padding-left: ${theme.spacing[1]};
 

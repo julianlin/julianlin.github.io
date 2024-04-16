@@ -1,6 +1,12 @@
 import { Close, Menu } from '@mui/icons-material';
 import { useState } from 'react';
-import { MobileNav, MobileNavItems, NavItem, NavItems, NavigationContainer } from './styles';
+import {
+  MobileNav,
+  MobileNavItems,
+  NavItem,
+  NavItems,
+  NavigationContainer,
+} from './styles';
 
 const Navigation = (props: any) => {
   const { profileRef, experienceRef, linksRef } = props;
@@ -10,53 +16,46 @@ const Navigation = (props: any) => {
     window.scrollTo(0, ref.current.offsetTop - 64);
   };
 
-
   const Links = [
     {
       name: 'About Me',
-      ref: profileRef
+      ref: profileRef,
     },
     {
       name: 'Experience',
-      ref: experienceRef
+      ref: experienceRef,
     },
     {
       name: 'Links',
-      ref: linksRef
-    }
-  ]
+      ref: linksRef,
+    },
+  ];
 
   return (
     <NavigationContainer>
       <MobileNav>
         <div>
-          {
-            menuOpen
-              ? <Close onClick={() => setMenuOpen(false)}/>
-              : <Menu onClick={() => setMenuOpen(true)}/>
-          }
+          {menuOpen ? (
+            <Close onClick={() => setMenuOpen(false)} />
+          ) : (
+            <Menu onClick={() => setMenuOpen(true)} />
+          )}
           <MobileNavItems display={menuOpen}>
-            {
-              Links.map(link =>
-                <li onClick={() => onClickNavItem(link.ref)}>
-                  {link.name}
-                </li>
-              )
-            }
+            {Links.map((link) => (
+              <li onClick={() => onClickNavItem(link.ref)}>{link.name}</li>
+            ))}
           </MobileNavItems>
         </div>
       </MobileNav>
       <NavItems>
-        {
-          Links.map(link =>
-            <NavItem onClick={() => onClickNavItem(link.ref)}>
-              {link.name}
-            </NavItem>
-          )
-        }
+        {Links.map((link) => (
+          <NavItem onClick={() => onClickNavItem(link.ref)}>
+            {link.name}
+          </NavItem>
+        ))}
       </NavItems>
     </NavigationContainer>
-  )
+  );
 };
 
 export default Navigation;

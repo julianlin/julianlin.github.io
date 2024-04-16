@@ -19,14 +19,14 @@ export const theme = {
     textPrimary: '#4c566a',
     textSecondary: '#d8dee9',
   },
-  spacing: ['4px', '8px', '16px', '32px', '64px']
-}
+  spacing: ['4px', '8px', '16px', '32px', '64px'],
+};
 
 export const breakpoints = {
   small: '600px',
   medium: '768px',
-  large: '1200px'
-}
+  large: '1200px',
+};
 
 export const spacing = {
   xs: '4px',
