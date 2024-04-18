@@ -76,7 +76,6 @@ export const NavItems = styled.div`
 `;
 
 export const NavigationContainer = styled.nav`
-  background-color: ${theme.colors.contrast};
   display: flex;
   min-height: 2rem;
   padding: 1rem;

@@ -6,13 +6,26 @@ import Navigation from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import Modal from './components/Modal';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { theme } from './theme';
+import { spacing, theme } from './theme';
 import styled from '@emotion/styled';
 
 const AppContainer = styled.div`
-  height: 1000px;
+  background-color: ${theme.palette.primary.dark};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
   min-width: 300px;
   width: 100%;
+`;
+
+const ContentContainer = styled.div`
+  align-items: center;
+  background-color: ${theme.palette.primary.main};
+  display: flex;
+  flex-direction: column;
+  margin-bottom: ${spacing.xl};
+  width: 80%;
 `;
 
 function App() {
@@ -32,11 +45,13 @@ function App() {
           linksRef={linksRef}
         />
         <IntroSection />
-        <ProfileSection
-          sectionRef={profileRef}
-          setDisplayVideo={setDisplayModal}
-        />
-        <ExperienceSection sectionRef={experienceRef} />
+        <ContentContainer>
+          <ProfileSection
+            sectionRef={profileRef}
+            setDisplayVideo={setDisplayModal}
+          />
+          <ExperienceSection sectionRef={experienceRef} />
+        </ContentContainer>
         <LinksSection sectionRef={linksRef} />
         <Modal display={displayModal} setDisplayModal={setDisplayModal} />
       </AppContainer>

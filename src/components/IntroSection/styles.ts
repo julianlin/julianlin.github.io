@@ -3,11 +3,11 @@ import { theme } from '../../theme';
 
 export const IntroSectionContainer = styled.section`
   align-items: center;
-  color: ${theme.colors.textPrimary};
+  color: ${theme.colors.textSecondary};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: ${theme.spacing[4]};
+  padding-bottom: ${theme.spacing[4]};
   width: 100%;
 
   img {

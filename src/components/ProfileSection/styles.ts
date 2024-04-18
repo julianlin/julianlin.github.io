@@ -120,12 +120,10 @@ export const Summary = styled.div`
 
 export const ProfileSectionContainer = styled.section`
   align-items: center;
-  background-color: ${theme.colors.primary};
   color: ${theme.colors.textSecondary};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: ${theme.spacing[4]};
-  padding-top: ${theme.spacing[4]};
-  width: 100%;
+  padding: ${theme.spacing[4]};
+  width: 80%;
 `;

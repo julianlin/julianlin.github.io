@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 import { breakpoints, theme } from '../../theme';
 
 export const CompanyContainer = styled.div`
-  color: ${theme.colors.textPrimary};
+  color: ${theme.colors.textSecondary};
 
   a {
     align-items: center;
-    color: ${theme.colors.textPrimary};
+    color: ${theme.colors.textSecondary};
     display: flex;
     text-decoration: none;
 
     &:visited: {
-      color: ${theme.colors.textPrimary};
+      color: ${theme.colors.textSecondary};
     }
 
     &:hover {
@@ -60,11 +60,11 @@ export const ExperienceSectionContainer = styled.section`
   justify-content: center;
   margin-bottom: ${theme.spacing[2]};
   margin-top: ${theme.spacing[2]};
-  width: 100%;
+  width: 80%;
 `;
 
 export const EducationContainer = styled.div`
-  color: ${theme.colors.textPrimary};
+  color: ${theme.colors.textSecondary};
 
   div {
     margin-bottom: ${theme.spacing[1]};
