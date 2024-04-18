@@ -24,7 +24,7 @@ export const Company: FC<CompanyProps> = ({
         return (
           <div>
             <h3>{position.name}</h3>
-            <a href={link} target="_blank_">
+            <a href={link} target='_blank_'>
               {companyName}
               <OpenInNew />
             </a>

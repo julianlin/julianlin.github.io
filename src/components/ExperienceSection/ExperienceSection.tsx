@@ -1,7 +1,7 @@
 import React, { FC, RefObject } from 'react';
 import { ContentWrapper, ExperienceSectionContainer } from './styles';
 import { Company } from './Company';
-import Education from './Education';
+import { Education } from './Education';
 
 type ExperienceSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -15,10 +15,10 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
       <ContentWrapper>
         <h2>Experience</h2>
         <Company
-          companyName="WealthPark"
-          startDate="Jan 2020"
-          endDate="Present"
-          link="https://wealth-park.com/en/"
+          companyName='WealthPark'
+          startDate='Jan 2020'
+          endDate='Present'
+          link='https://wealth-park.com/en/'
           positions={[
             {
               description: [
@@ -32,10 +32,10 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
           ]}
         />
         <Company
-          companyName="Santa Clara University"
-          startDate="Jun 2019"
-          endDate="Dec 2020"
-          link="https://ywca-sv.org/curated-pathways-to-innovation/"
+          companyName='Santa Clara University'
+          startDate='Jun 2019'
+          endDate='Dec 2020'
+          link='https://ywca-sv.org/curated-pathways-to-innovation/'
           positions={[
             {
               description: [
@@ -48,10 +48,10 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
           ]}
         />
         <Company
-          companyName="Drive.ai"
-          startDate="July 2015"
-          endDate="Jun 2019"
-          link="https://en.wikipedia.org/wiki/Drive.ai"
+          companyName='Drive.ai'
+          startDate='July 2015'
+          endDate='Jun 2019'
+          link='https://en.wikipedia.org/wiki/Drive.ai'
           positions={[
             {
               description: [
@@ -68,14 +68,14 @@ const ExperienceSection: FC<ExperienceSectionType> = (props) => {
       <ContentWrapper>
         <h2>Education</h2>
         <Education
-          date="2016-2019"
-          degree="M.S., Computer Science and Engineering"
-          institution="Santa Clara University, Santa Clara, CA"
+          date='2016-2019'
+          degree='M.S., Computer Science and Engineering'
+          institution='Santa Clara University, Santa Clara, CA'
         />
         <Education
-          date="2011-2015"
-          degree="B.S., Computer Engineering"
-          institution="University of California, Davis, CA"
+          date='2011-2015'
+          degree='B.S., Computer Engineering'
+          institution='University of California, Davis, CA'
         />
       </ContentWrapper>
     </ExperienceSectionContainer>

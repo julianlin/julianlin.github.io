@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { FC } from 'react';
 import { EducationContainer } from './styles';
 
@@ -7,16 +8,12 @@ type EducationType = {
   institution: string;
 };
 
-const Education: FC<EducationType> = (props) => {
-  const { date, degree, institution } = props;
-
+export const Education: FC<EducationType> = ({ date, degree, institution }) => {
   return (
     <EducationContainer>
-      <h3>{degree}</h3>
-      <div>{institution}</div>
-      <div>{date}</div>
+      <Typography variant='h3'>{degree}</Typography>
+      <Typography>{institution}</Typography>
+      <Typography>{date}</Typography>
     </EducationContainer>
   );
 };
-
-export default Education;

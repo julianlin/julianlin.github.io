@@ -29,7 +29,7 @@ const LinksSection: FC<LinksSectionType> = (props) => {
       <ul>
         {Links.map((link) => (
           <li>
-            <a href={link.url} target="_blank_">
+            <a href={link.url} target='_blank_'>
               {link.text}
             </a>
           </li>

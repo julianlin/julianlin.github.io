@@ -16,7 +16,7 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
   return (
     <ProfileSectionContainer ref={sectionRef}>
       <Summary>
-        <Typography component="p" variant="h4">
+        <Typography component='p' variant='h4'>
           Hi, I'm Julian. Nice to meet you.
         </Typography>
         <Typography>
@@ -47,7 +47,7 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
               ['React', 'Apollo', 'styled-components', 'Bootstrap'],
             ],
           ]}
-          title="Front-end Development"
+          title='Front-end Development'
         />
         <Column
           icon={<Build />}
@@ -55,7 +55,7 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
             ['Frameworks', ['Express', 'Next.js']],
             ['Tools', ['GitHub', 'GitLab', 'Invision']],
           ]}
-          title="Dev Tools and Technologies"
+          title='Dev Tools and Technologies'
         />
         <Column
           icon={<Person />}
@@ -74,7 +74,7 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
               ],
             ],
           ]}
-          title="Everything Else"
+          title='Everything Else'
         />
       </Columns>
     </ProfileSectionContainer>

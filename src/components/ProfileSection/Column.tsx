@@ -25,7 +25,7 @@ const Column: FC<ColumnType> = (props) => {
                   if (typeof item[1] === 'string') {
                     return (
                       <li>
-                        <a href={item[1]} rel="noreferrer" target="_blank">
+                        <a href={item[1]} rel='noreferrer' target='_blank'>
                           {item[0]}
                           <OpenInNew />
                         </a>

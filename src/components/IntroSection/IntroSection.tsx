@@ -7,7 +7,7 @@ const IntroSection = () => {
     <IntroSectionContainer>
       <Name>Julian Lin</Name>
       <h2>Front-end Developer</h2>
-      <img alt="Julian Lin" src={ProfilePhoto} />
+      <img alt='Julian Lin' src={ProfilePhoto} />
     </IntroSectionContainer>
   );
 };
