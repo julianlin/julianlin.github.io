@@ -19,6 +19,7 @@ export const theme = {
     text: '#2e3440',
     textPrimary: '#4c566a',
     textSecondary: '#d8dee9',
+    textContrast: '#ffffff',
   },
   spacing: ['4px', '8px', '16px', '32px', '64px'],
 };

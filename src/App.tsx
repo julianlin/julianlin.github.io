@@ -22,6 +22,10 @@ const AppContainer = styled.div`
 const ContentContainer = styled.div`
   align-items: center;
   background-color: ${theme.palette.primary.main};
+  border-radius: 8px;
+  box-shadow:
+    rgba(15, 17, 21, 0.25) 0px 4px 6px,
+    rgba(15, 17, 21, 0.1) 0px 5px 7px;
   display: flex;
   flex-direction: column;
   margin-bottom: ${spacing.xl};

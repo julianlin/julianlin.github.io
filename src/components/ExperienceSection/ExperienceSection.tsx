@@ -1,15 +1,13 @@
-import React, { FC, RefObject } from 'react';
-import { ContentWrapper, ExperienceSectionContainer } from './styles';
+import { FC, RefObject } from 'react';
 import { Company } from './Company';
 import { Education } from './Education';
+import { ContentWrapper, ExperienceSectionContainer } from './styles';
 
 type ExperienceSectionType = {
   sectionRef: RefObject<HTMLElement>;
 };
 
-const ExperienceSection: FC<ExperienceSectionType> = (props) => {
-  const { sectionRef } = props;
-
+const ExperienceSection: FC<ExperienceSectionType> = ({ sectionRef }) => {
   return (
     <ExperienceSectionContainer ref={sectionRef}>
       <ContentWrapper>
