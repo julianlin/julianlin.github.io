@@ -13,8 +13,9 @@ const config = {
   ],
 
   rules: {
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    'prettier/prettier': 'warn',
   },
 
   env: {

@@ -5,11 +5,13 @@ import { ColumnContainer, VideoItem } from './styles';
 type LinkType = {
   text: string;
   link: string;
+  type: 'LINK';
 };
 
 type ActionType = {
   text: string;
   action: Dispatch<SetStateAction<boolean>>;
+  type: 'ACTION';
 };
 
 type SectionType = {
@@ -34,26 +36,24 @@ const Column: FC<ColumnType> = ({ icon, sections, title }) => {
             <h4>{section.title}</h4>
             <ul>
               {section.items.map((item) => {
-                if (Array.isArray(item)) {
-                  if (typeof item[1] === 'string') {
-                    return (
-                      <li>
-                        <a href={item[1]} rel='noreferrer' target='_blank'>
-                          {item[0]}
-                          <OpenInNew />
-                        </a>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <VideoItem onClick={() => item[1](true)}>
-                        {item[0]}
-                        <OpenInNew />
-                      </VideoItem>
-                    );
-                  }
-                } else {
+                if (typeof item === 'string'){
                   return <li>{item}</li>;
+                } else if (item.type === 'LINK') {
+                  return (
+                    <li>
+                      <a href={item.link} rel='noreferrer' target='_blank'>
+                        {item.text}
+                        <OpenInNew />
+                      </a>
+                    </li>
+                  );
+                } else if (item.type === 'ACTION'){
+                  return (
+                    <VideoItem onClick={() => item.action(true)}>
+                      {item.text}
+                      <OpenInNew />
+                    </VideoItem>
+                  );
                 }
               })}
             </ul>

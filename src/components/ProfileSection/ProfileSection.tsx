@@ -69,8 +69,9 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
                 {
                   text: 'Gold medalist in Wushu',
                   link: 'http://cmat.calwushu.com/cmat19results.html',
+                  type: 'LINK',
                 },
-                { text: 'Can squat over 400lb', action: setDisplayVideo },
+                { text: 'Can squat over 400lb', action: setDisplayVideo, type: 'ACTION' },
               ],
             },
           ]}
