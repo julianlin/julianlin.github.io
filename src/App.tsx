@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import ExperienceSection from './components/ExperienceSection/ExperienceSection';
+import { useRef, useState } from 'react';
+import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
 import LinksSection from './components/LinksSection/LinksSection';
 import IntroSection from './components/IntroSection/IntroSection';
 import Navigation from './components/Navigation/Navigation';
