@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import styled from '@emotion/styled';
+import { Dispatch, FC, SetStateAction } from 'react';
 import { theme } from '../theme';
 
 import Video from '../assets/squat.mp4';
@@ -22,12 +22,10 @@ const ModalContainer = styled.div`
 
 type ModalType = {
   display: boolean;
-  setDisplayModal: any;
+  setDisplayModal: Dispatch<SetStateAction<boolean>>;
 };
 
-const Modal: FC<ModalType> = (props) => {
-  const { display, setDisplayModal } = props;
-
+const Modal: FC<ModalType> = ({ display, setDisplayModal }) => {
   if (!display) {
     return null;
   }

@@ -1,5 +1,5 @@
 import { Close, Menu } from '@mui/icons-material';
-import { useState } from 'react';
+import { FC, RefObject, useState } from 'react';
 import {
   MobileNav,
   MobileNavItems,
@@ -8,12 +8,21 @@ import {
   NavigationContainer,
 } from './styles';
 
-const Navigation = (props: any) => {
-  const { profileRef, experienceRef, linksRef } = props;
+type NavigationProps = {
+  experienceRef: RefObject<HTMLElement>;
+  linksRef: RefObject<HTMLElement>;
+  profileRef: RefObject<HTMLElement>;
+};
+
+export const Navigation: FC<NavigationProps> = ({
+  experienceRef,
+  linksRef,
+  profileRef,
+}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const onClickNavItem = (ref: any) => {
-    window.scrollTo(0, ref.current.offsetTop - 64);
+  const onClickNavItem = (ref: RefObject<HTMLElement>) => {
+    if (ref.current) window.scrollTo(0, ref.current.offsetTop - 64);
   };
 
   const Links = [
@@ -57,5 +66,3 @@ const Navigation = (props: any) => {
     </NavigationContainer>
   );
 };
-
-export default Navigation;

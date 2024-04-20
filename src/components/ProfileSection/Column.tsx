@@ -1,16 +1,29 @@
-import { FC } from 'react';
-import { ColumnContainer, VideoItem } from './styles';
 import { OpenInNew } from '@mui/icons-material';
+import { Dispatch, FC, ReactElement, SetStateAction } from 'react';
+import { ColumnContainer, VideoItem } from './styles';
+
+type LinkType = {
+  text: string;
+  link: string;
+};
+
+type ActionType = {
+  text: string;
+  action: Dispatch<SetStateAction<boolean>>;
+};
+
+type SectionType = {
+  title: string;
+  items: (ActionType | LinkType | string)[];
+};
 
 type ColumnType = {
-  icon: any;
-  sections: any[];
+  icon: ReactElement;
+  sections: SectionType[];
   title: string;
 };
 
-const Column: FC<ColumnType> = (props) => {
-  const { icon, sections, title } = props;
-
+const Column: FC<ColumnType> = ({ icon, sections, title }) => {
   return (
     <ColumnContainer>
       {icon}
@@ -18,9 +31,9 @@ const Column: FC<ColumnType> = (props) => {
       {sections.map((section) => {
         return (
           <div>
-            <h4>{section[0]}</h4>
+            <h4>{section.title}</h4>
             <ul>
-              {section[1].map((item: string) => {
+              {section.items.map((item) => {
                 if (Array.isArray(item)) {
                   if (typeof item[1] === 'string') {
                     return (

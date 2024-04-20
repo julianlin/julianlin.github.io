@@ -1,13 +1,13 @@
 import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
-import { FC, RefObject } from 'react';
+import { FC, RefObject, Dispatch, SetStateAction } from 'react';
 import Column from './Column';
 import { Columns, ProfileSectionContainer, Summary } from './styles';
 import { Typography } from '@mui/material';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
-  setDisplayVideo: any;
+  setDisplayVideo: Dispatch<SetStateAction<boolean>>;
 };
 
 const ProfileSection: FC<ProfileSectionType> = (props) => {
@@ -30,9 +30,9 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
         <Column
           icon={<CodeIcon />}
           sections={[
-            [
-              'Languages',
-              [
+            {
+              title: 'Languages',
+              items: [
                 'Javascript',
                 'Typescript',
                 'HTML',
@@ -41,38 +41,38 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
                 'Python',
                 'GraphQL',
               ],
-            ],
-            [
-              'Libraries',
-              ['React', 'Apollo', 'styled-components', 'Bootstrap'],
-            ],
+            },
+            {
+              title: 'Libraries',
+              items: ['React', 'Apollo', 'styled-components', 'Bootstrap'],
+            },
           ]}
           title='Front-end Development'
         />
         <Column
           icon={<Build />}
           sections={[
-            ['Frameworks', ['Express', 'Next.js']],
-            ['Tools', ['GitHub', 'GitLab', 'Invision']],
+            { title: 'Frameworks', items: ['Express', 'Next.js'] },
+            { title: 'Tools', items: ['GitHub', 'GitLab', 'Invision'] },
           ]}
           title='Dev Tools and Technologies'
         />
         <Column
           icon={<Person />}
           sections={[
-            ['Tools', ['Invision', 'Jira', 'Confluence']],
-            [
-              'Other Skills and Achievements',
-              [
+            { title: 'Tools', items: ['Invision', 'Jira', 'Confluence'] },
+            {
+              title: 'Other Skills and Achievements',
+              items: [
                 'Japanese(JLPT N1)',
                 '2 years exp as manager',
-                [
-                  'Gold medalist in Wushu',
-                  'http://cmat.calwushu.com/cmat19results.html',
-                ],
-                ['Can squat over 400lb', setDisplayVideo],
+                {
+                  text: 'Gold medalist in Wushu',
+                  link: 'http://cmat.calwushu.com/cmat19results.html',
+                },
+                { text: 'Can squat over 400lb', action: setDisplayVideo },
               ],
-            ],
+            },
           ]}
           title='Everything Else'
         />

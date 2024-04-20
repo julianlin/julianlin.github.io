@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
 import LinksSection from './components/LinksSection/LinksSection';
 import IntroSection from './components/IntroSection/IntroSection';
-import Navigation from './components/Navigation/Navigation';
+import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import Modal from './components/Modal';
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -34,17 +34,15 @@ const ContentContainer = styled.div`
 
 function App() {
   const [displayModal, setDisplayModal] = useState(false);
-  const pageRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
   return (
     <ThemeProvider theme={createTheme(theme)}>
-      <AppContainer ref={pageRef}>
+      <AppContainer>
         <Navigation
           experienceRef={experienceRef}
-          pageRef={pageRef}
           profileRef={profileRef}
           linksRef={linksRef}
         />
