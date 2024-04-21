@@ -36,7 +36,7 @@ const Column: FC<ColumnType> = ({ icon, sections, title }) => {
             <h4>{section.title}</h4>
             <ul>
               {section.items.map((item) => {
-                if (typeof item === 'string'){
+                if (typeof item === 'string') {
                   return <li>{item}</li>;
                 } else if (item.type === 'LINK') {
                   return (
@@ -47,7 +47,7 @@ const Column: FC<ColumnType> = ({ icon, sections, title }) => {
                       </a>
                     </li>
                   );
-                } else if (item.type === 'ACTION'){
+                } else if (item.type === 'ACTION') {
                   return (
                     <VideoItem onClick={() => item.action(true)}>
                       {item.text}

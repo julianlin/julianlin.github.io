@@ -15,7 +15,9 @@ export const ExperienceSection: FC<ExperienceSectionType> = ({
   return (
     <ExperienceSectionContainer ref={sectionRef}>
       <ContentWrapper>
-        <Typography variant='h2'>Experience</Typography>
+        <Typography component='h2' variant='h4'>
+          Experience
+        </Typography>
         {jobs.map((job) => (
           <Company
             companyName={job.companyName}
@@ -32,7 +34,9 @@ export const ExperienceSection: FC<ExperienceSectionType> = ({
         ))}
       </ContentWrapper>
       <ContentWrapper>
-        <Typography variant='h2'>Education</Typography>
+        <Typography component='h2' variant='h4'>
+          Education
+        </Typography>
         <Education
           date='2016-2019'
           degree='M.S., Computer Science and Engineering'

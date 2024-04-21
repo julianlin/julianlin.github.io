@@ -71,7 +71,11 @@ const ProfileSection: FC<ProfileSectionType> = (props) => {
                   link: 'http://cmat.calwushu.com/cmat19results.html',
                   type: 'LINK',
                 },
-                { text: 'Can squat over 400lb', action: setDisplayVideo, type: 'ACTION' },
+                {
+                  text: 'Can squat over 400lb',
+                  action: setDisplayVideo,
+                  type: 'ACTION',
+                },
               ],
             },
           ]}

@@ -34,15 +34,12 @@ export const CompanyContainer = styled.div`
   div {
     margin-bottom: ${theme.spacing[1]};
   }
-
-  h3 {
-    color: ${theme.colors.darkText};
-  }
 `;
 
 export const ContentWrapper = styled.div`
-  border: 1px solid ${theme.colors.light};
+  border: 2px solid ${theme.colors.light};
   border-radius: 12px;
+  color: ${theme.colors.textContrast};
   max-width: 1200px;
   padding: ${theme.spacing[2]};
   margin: ${theme.spacing[2]};

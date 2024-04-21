@@ -8,21 +8,8 @@ export const ColumnContainer = styled.div`
   padding: ${theme.spacing[3]};
   text-align: center;
 
-  h3 {
-    color: ${theme.colors.textPrimary};
-    font-size: 1.5rem;
-    margin-bottom: ${theme.spacing[1]};
-  }
-
-  h4 {
-    color: ${theme.colors.primary};
-    font-size: 1.25rem;
-    font-weight: normal;
-    margin: ${theme.spacing[1]};
-  }
-
   ul {
-    color: ${theme.colors.textPrimary};
+    color: ${theme.colors.textContrast};
     line-height: 2rem;
     list-style-type: none;
     padding: 0;
@@ -35,7 +22,7 @@ export const ColumnContainer = styled.div`
       text-decoration: none;
 
       &:visited {
-        color: ${theme.colors.textPrimary};
+        color: ${theme.colors.textContrast};
       }
 
       &:hover {
@@ -81,8 +68,8 @@ export const VideoItem = styled.li`
 `;
 
 export const Columns = styled.div`
-  background-color: white;
   border-radius: 12px;
+  border: 2px solid ${theme.colors.light};
   display: flex;
   flex-direction: column;
   margin: ${theme.spacing[2]};
@@ -95,7 +82,7 @@ export const Columns = styled.div`
   @media only screen and (min-width: ${breakpoints.medium}) {
     > div:not(:last-child) {
       border-bottom: none;
-      border-right: 1px solid ${theme.colors.light};
+      border-right: 2px solid ${theme.colors.light};
     }
     flex-direction: row;
     width: 100%;
@@ -125,5 +112,4 @@ export const ProfileSectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: ${theme.spacing[4]};
-  width: 80%;
 `;

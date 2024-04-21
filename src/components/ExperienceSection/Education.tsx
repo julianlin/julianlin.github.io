@@ -11,7 +11,9 @@ type EducationType = {
 export const Education: FC<EducationType> = ({ date, degree, institution }) => {
   return (
     <EducationContainer>
-      <Typography variant='h3'>{degree}</Typography>
+      <Typography component='p' variant='h5'>
+        {degree}
+      </Typography>
       <Typography>{institution}</Typography>
       <Typography>{date}</Typography>
     </EducationContainer>

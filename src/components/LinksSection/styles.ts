@@ -31,7 +31,7 @@ export const LinksSectionContainer = styled.section`
       width: ${spacing.xl};
 
       &:active {
-        border: 1px solid ${theme.colors.contrast};
+        border: 2px solid ${theme.colors.contrast};
       }
 
       &:hover {
