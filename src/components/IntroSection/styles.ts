@@ -7,11 +7,11 @@ export const IntroSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: ${theme.spacing[4]};
+  margin-bottom: ${theme.spacing[4]};
   width: 100%;
+`;
 
-  img {
-    border-radius: 50%;
-    padding-top: ${theme.spacing[2]};
-  }
+export const ProfilePicture = styled.img`
+  border-radius: 60%;
+  margin-top: ${theme.spacing[4]};
 `;
