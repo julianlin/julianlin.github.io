@@ -1,15 +1,17 @@
-import { IntroSectionContainer, Name } from './styles';
-
+import { IntroSectionContainer } from './styles';
 import ProfilePhoto from '../../assets/profile-photo.jpg';
+import { Typography } from '@mui/material';
 
-const IntroSection = () => {
+export const IntroSection = () => {
   return (
     <IntroSectionContainer>
-      <Name>Julian Lin</Name>
-      <h2>Front-end Developer</h2>
+      <Typography component='p' variant='h3'>
+        Julian Lin
+      </Typography>
+      <Typography component='p' variant='h4'>
+        Front-end Developer
+      </Typography>
       <img alt='Julian Lin' src={ProfilePhoto} />
     </IntroSectionContainer>
   );
 };
-
-export default IntroSection;

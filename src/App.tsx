@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
 import LinksSection from './components/LinksSection/LinksSection';
-import IntroSection from './components/IntroSection/IntroSection';
+import { IntroSection } from './components/IntroSection/IntroSection';
 import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import Modal from './components/Modal';

@@ -3,7 +3,7 @@ import { theme } from '../../theme';
 
 export const IntroSectionContainer = styled.section`
   align-items: center;
-  color: ${theme.colors.textSecondary};
+  color: ${theme.colors.textContrast};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,10 +12,6 @@ export const IntroSectionContainer = styled.section`
 
   img {
     border-radius: 50%;
+    padding-top: ${theme.spacing[2]};
   }
-`;
-
-export const Name = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 0;
 `;
