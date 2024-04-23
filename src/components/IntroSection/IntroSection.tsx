@@ -1,6 +1,6 @@
-import { IntroSectionContainer, ProfilePicture } from './styles';
-import ProfilePhoto from '../../assets/profile-photo.jpg';
 import { Typography } from '@mui/material';
+import ProfilePhoto from '../../assets/profile-photo.jpg';
+import { IntroSectionContainer, ProfilePicture } from './styles';
 
 export const IntroSection = () => {
   return (

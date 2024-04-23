@@ -12,6 +12,6 @@ export const IntroSectionContainer = styled.section`
 `;
 
 export const ProfilePicture = styled.img`
-  border-radius: 60%;
+  border-radius: 50%;
   margin-top: ${theme.spacing[4]};
 `;

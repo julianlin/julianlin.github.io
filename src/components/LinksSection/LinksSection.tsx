@@ -1,5 +1,6 @@
 import { FC, RefObject } from 'react';
 import { LinksSectionContainer } from './styles';
+import { Typography } from '@mui/material';
 
 const Links = [
   {
@@ -20,12 +21,12 @@ type LinksSectionType = {
   sectionRef: RefObject<HTMLElement>;
 };
 
-const LinksSection: FC<LinksSectionType> = (props) => {
-  const { sectionRef } = props;
-
+export const LinksSection: FC<LinksSectionType> = ({ sectionRef }) => {
   return (
     <LinksSectionContainer ref={sectionRef}>
-      <h2>Links</h2>
+      <Typography component='h2' variant='h4'>
+        Links
+      </Typography>
       <ul>
         {Links.map((link) => (
           <li>
@@ -38,5 +39,3 @@ const LinksSection: FC<LinksSectionType> = (props) => {
     </LinksSectionContainer>
   );
 };
-
-export default LinksSection;

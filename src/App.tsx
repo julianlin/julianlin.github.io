@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
-import LinksSection from './components/LinksSection/LinksSection';
+import { LinksSection } from './components/LinksSection/LinksSection';
 import { IntroSection } from './components/IntroSection/IntroSection';
 import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import Modal from './components/Modal';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { spacing, theme } from './theme';
+import { theme } from './theme';
 import styled from '@emotion/styled';
 
 const AppContainer = styled.div`
@@ -28,7 +28,7 @@ const ContentContainer = styled.div`
     rgba(15, 17, 21, 0.1) 0px 5px 7px;
   display: flex;
   flex-direction: column;
-  margin-bottom: ${spacing.xl};
+  margin-bottom: ${theme.spacing[4]};
   width: 80%;
 `;
 

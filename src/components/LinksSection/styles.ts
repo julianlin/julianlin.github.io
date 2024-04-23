@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
-import { breakpoints, spacing, theme } from '../../theme';
+import { breakpoints, theme } from '../../theme';
 
 export const LinksSectionContainer = styled.section`
   align-items: center;
   background-color: ${theme.palette.primary.main};
-  color: ${theme.colors.contrast};
+  color: ${theme.colors.textContrast};
   display: flex;
   flex-direction: column;
-  padding-bottom: ${spacing.m};
-  padding-top: ${spacing.m};
+  padding: ${theme.spacing[1]} 0;
   width: 100%;
 
   ul {
@@ -16,7 +15,7 @@ export const LinksSectionContainer = styled.section`
   }
 
   li {
-    margin: ${spacing.m};
+    margin: ${theme.spacing[1]};
     margin-top: 0;
 
     a {
@@ -26,9 +25,9 @@ export const LinksSectionContainer = styled.section`
       display: flex;
       font-weight: bold;
       justify-content: center;
-      padding: ${spacing.s};
+      padding: ${theme.spacing[1]} ${theme.spacing[2]};
       text-decoration: none;
-      width: ${spacing.xl};
+      width: ${theme.spacing[3]};
 
       &:active {
         border: 2px solid ${theme.colors.contrast};
