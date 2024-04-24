@@ -3,7 +3,7 @@ import { theme } from '../../theme';
 
 export const IntroSectionContainer = styled.section`
   align-items: center;
-  color: ${theme.colors.textContrast};
+  color: ${theme.palette.primary.contrastText};
   display: flex;
   flex-direction: column;
   justify-content: center;

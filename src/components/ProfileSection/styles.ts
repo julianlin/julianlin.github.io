@@ -9,7 +9,7 @@ export const ColumnContainer = styled.div`
   text-align: center;
 
   ul {
-    color: ${theme.colors.textContrast};
+    color: ${theme.palette.primary.contrastText};
     line-height: 2rem;
     list-style-type: none;
     padding: 0;
@@ -22,7 +22,7 @@ export const ColumnContainer = styled.div`
       text-decoration: none;
 
       &:visited {
-        color: ${theme.colors.textContrast};
+        color: ${theme.palette.primary.contrastText};
       }
 
       &:hover {

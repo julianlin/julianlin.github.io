@@ -30,7 +30,7 @@ type MobileNavItemsType = {
 };
 
 export const MobileNavItems = styled.ul<MobileNavItemsType>`
-  color: ${theme.colors.textContrast};
+  color: ${theme.palette.primary.contrastText};
   display: ${(p) => (p.display ? 'block' : 'none')};
   font-size: 1.5rem;
   padding-left: ${theme.spacing[1]};
@@ -51,7 +51,7 @@ export const MobileNavItems = styled.ul<MobileNavItemsType>`
 export const NavItem = styled.a`
   background: none;
   border: none;
-  color: ${theme.colors.textContrast};
+  color: ${theme.palette.primary.contrastText};
   cursor: pointer;
   fill: none;
   font-size: 1.25rem;

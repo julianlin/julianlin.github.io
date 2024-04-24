@@ -1,6 +1,6 @@
+import { Typography } from '@mui/material';
 import { FC, RefObject } from 'react';
 import { LinksSectionContainer } from './styles';
-import { Typography } from '@mui/material';
 
 const Links = [
   {

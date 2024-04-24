@@ -4,7 +4,7 @@ import { breakpoints, theme } from '../../theme';
 export const LinksSectionContainer = styled.section`
   align-items: center;
   background-color: ${theme.palette.primary.main};
-  color: ${theme.colors.textContrast};
+  color: ${theme.palette.primary.contrastText};
   display: flex;
   flex-direction: column;
   padding: ${theme.spacing[1]} 0;
