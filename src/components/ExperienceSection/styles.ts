@@ -24,7 +24,7 @@ export const CompanyContainer = styled.div`
 
     svg {
       cursor: pointer;
-      fill: ${theme.colors.textPrimary};
+      fill: ${theme.palette.primary.contrastText};
       height: 1rem;
       padding-left: ${theme.spacing[1]};
       width: 1rem;
@@ -61,13 +61,9 @@ export const ExperienceSectionContainer = styled.section`
 `;
 
 export const EducationContainer = styled.div`
-  color: ${theme.colors.textSecondary};
+  color: ${theme.palette.primary.contrastText};
 
   div {
     margin-bottom: ${theme.spacing[1]};
-  }
-
-  h3 {
-    color: ${theme.colors.darkText};
   }
 `;
