@@ -15,10 +15,10 @@ export const CompanyContainer = styled.div`
     }
 
     &:hover {
-      color: ${theme.colors.light};
+      color: ${theme.palette.secondary.main};
 
       svg {
-        fill: ${theme.colors.light};
+        fill: ${theme.palette.secondary.main};
       }
     }
 
@@ -37,7 +37,7 @@ export const CompanyContainer = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  border: 2px solid ${theme.colors.light};
+  border: 2px solid ${theme.palette.secondary.main};
   border-radius: 12px;
   color: ${theme.palette.primary.contrastText};
   max-width: 1200px;

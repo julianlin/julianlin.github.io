@@ -34,10 +34,10 @@ export const LinksSectionContainer = styled.section`
       }
 
       &:hover {
-        background-color: ${theme.colors.light};
+        background-color: ${theme.palette.secondary.main};
 
         svg {
-          fill: ${theme.colors.light};
+          fill: ${theme.palette.secondary.main};
         }
       }
 

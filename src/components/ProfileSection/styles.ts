@@ -26,17 +26,17 @@ export const ColumnContainer = styled.div`
       }
 
       &:hover {
-        color: ${theme.colors.light};
+        color: ${theme.palette.secondary.main};
 
         svg {
-          fill: ${theme.colors.light};
+          fill: ${theme.palette.secondary.main};
         }
       }
     }
 
     svg {
       cursor: pointer;
-      fill: ${theme.colors.secondary};
+      fill: ${theme.palette.secondary.main};
       height: 1rem;
       padding-left: ${theme.spacing[1]};
       width: 1rem;
@@ -44,7 +44,7 @@ export const ColumnContainer = styled.div`
   }
 
   svg {
-    fill: ${theme.colors.secondary};
+    fill: ${theme.palette.secondary.main};
     height: ${theme.spacing[4]};
     width: ${theme.spacing[4]};
   }
@@ -59,30 +59,30 @@ export const ColumnContainer = styled.div`
 export const VideoItem = styled.li`
   cursor: pointer;
   &:hover {
-    color: ${theme.colors.light};
+    color: ${theme.palette.secondary.main};
 
     svg {
-      fill: ${theme.colors.light};
+      fill: ${theme.palette.secondary.main};
     }
   }
 `;
 
 export const Columns = styled.div`
   border-radius: 12px;
-  border: 2px solid ${theme.colors.light};
+  border: 2px solid ${theme.palette.secondary.main};
   display: flex;
   flex-direction: column;
   margin: ${theme.spacing[2]};
   max-width: 1200px;
 
   > div:not(:last-child) {
-    border-bottom: 1px solid ${theme.colors.light};
+    border-bottom: 1px solid ${theme.palette.secondary.main};
   }
 
   @media only screen and (min-width: ${breakpoints.medium}) {
     > div:not(:last-child) {
       border-bottom: none;
-      border-right: 2px solid ${theme.colors.light};
+      border-right: 2px solid ${theme.palette.secondary.main};
     }
     flex-direction: row;
     width: 100%;
