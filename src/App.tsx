@@ -1,13 +1,14 @@
+import styled from '@emotion/styled';
+import { ThemeProvider, createTheme } from '@mui/material';
 import { useRef, useState } from 'react';
+import Video from './assets/squat.mp4';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
-import { LinksSection } from './components/LinksSection/LinksSection';
 import { IntroSection } from './components/IntroSection/IntroSection';
+import { LinksSection } from './components/LinksSection/LinksSection';
+import { Modal } from './components/Modal/Modal';
 import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
-import Modal from './components/Modal';
-import { createTheme, ThemeProvider } from '@mui/material';
 import { theme } from './theme';
-import styled from '@emotion/styled';
 
 const AppContainer = styled.div`
   background-color: ${theme.palette.primary.dark};
@@ -38,6 +39,8 @@ function App() {
   const experienceRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
+  const handleOnCloseModal = () => setDisplayModal(false);
+
   return (
     <ThemeProvider theme={createTheme(theme)}>
       <AppContainer>
@@ -55,7 +58,11 @@ function App() {
           <ExperienceSection sectionRef={experienceRef} />
         </ContentContainer>
         <LinksSection sectionRef={linksRef} />
-        <Modal display={displayModal} setDisplayModal={setDisplayModal} />
+        <Modal open={displayModal} onClose={handleOnCloseModal}>
+          <div>
+            <video controls autoPlay src={Video} />
+          </div>
+        </Modal>
       </AppContainer>
     </ThemeProvider>
   );
