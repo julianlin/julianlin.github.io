@@ -39,7 +39,10 @@ function App() {
   const experienceRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
-  const handleOnCloseModal = () => setDisplayModal(false);
+  const handleOnCloseModal = () => {
+    console.log('test');
+    setDisplayModal(false);
+  };
 
   return (
     <ThemeProvider theme={createTheme(theme)}>

@@ -1,6 +1,11 @@
-import { Modal as MuiModal, ModalProps } from '@mui/material';
+import { ModalProps } from '@mui/material';
 import { FC } from 'react';
+import { ModalContent, StyledModal } from './styles';
 
 export const Modal: FC<ModalProps> = ({ ...props }) => {
-  return <MuiModal {...props}></MuiModal>;
+  return (
+    <StyledModal {...props}>
+      <ModalContent>{props.children}</ModalContent>
+    </StyledModal>
+  );
 };
