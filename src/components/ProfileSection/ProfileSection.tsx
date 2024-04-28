@@ -1,18 +1,19 @@
 import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
-import { FC, RefObject, Dispatch, SetStateAction } from 'react';
+import { Typography } from '@mui/material';
+import { Dispatch, FC, RefObject, SetStateAction } from 'react';
 import Column from './Column';
 import { Columns, ProfileSectionContainer, Summary } from './styles';
-import { Typography } from '@mui/material';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
   setDisplayVideo: Dispatch<SetStateAction<boolean>>;
 };
 
-const ProfileSection: FC<ProfileSectionType> = (props) => {
-  const { sectionRef, setDisplayVideo } = props;
-
+const ProfileSection: FC<ProfileSectionType> = ({
+  sectionRef,
+  setDisplayVideo,
+}) => {
   return (
     <ProfileSectionContainer ref={sectionRef}>
       <Summary>

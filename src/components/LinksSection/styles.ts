@@ -21,7 +21,7 @@ export const LinksSectionContainer = styled.section`
     a {
       align-items: center;
       border-radius: 4px;
-      color: ${theme.colors.contrast};
+      color: ${theme.palette.primary.contrastText};
       display: flex;
       font-weight: bold;
       justify-content: center;

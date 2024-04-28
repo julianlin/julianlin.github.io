@@ -12,7 +12,6 @@ export const theme = {
   },
   colors: {
     contrast: '#ffffff',
-    modalBackground: 'rgba(0, 0, 0, 0.8);',
     textPrimary: '#4c566a',
     textSecondary: '#d8dee9',
   },

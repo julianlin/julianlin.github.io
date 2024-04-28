@@ -95,10 +95,14 @@ export const Summary = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 2rem;
-  padding-bottom: ${theme.spacing[4]};
+  padding-bottom: ${theme.spacing[2]};
   padding-left: ${theme.spacing[2]};
   padding-right: ${theme.spacing[2]};
   text-align: center;
+
+  p {
+    margin-bottom: ${theme.spacing[2]};
+  }
 
   @media only screen and (min-width: ${breakpoints.medium}) {
     max-width: 640px;
