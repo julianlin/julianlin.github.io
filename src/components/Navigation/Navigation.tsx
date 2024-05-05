@@ -7,6 +7,7 @@ import {
   NavItems,
   NavigationContainer,
 } from './styles';
+import { Drawer } from '@mui/material';
 
 type NavigationProps = {
   experienceRef: RefObject<HTMLElement>;
@@ -49,11 +50,18 @@ export const Navigation: FC<NavigationProps> = ({
           ) : (
             <Menu onClick={() => setMenuOpen(true)} />
           )}
-          <MobileNavItems display={menuOpen}>
-            {Links.map((link) => (
-              <li onClick={() => onClickNavItem(link.ref)}>{link.name}</li>
-            ))}
-          </MobileNavItems>
+          <Drawer
+            anchor='top'
+            open={menuOpen}
+            onClose={() => setMenuOpen(false)}
+          >
+            <MobileNavItems>
+              <Close onClick={() => setMenuOpen(false)} />
+              {Links.map((link) => (
+                <li onClick={() => onClickNavItem(link.ref)}>{link.name}</li>
+              ))}
+            </MobileNavItems>
+          </Drawer>
         </div>
       </MobileNav>
       <NavItems>

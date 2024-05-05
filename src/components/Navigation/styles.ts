@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { breakpoints, theme } from '../../theme';
 
 export const MobileNav = styled.div`
+  padding: 0 ${theme.spacing[2]};
   width: 100%;
 
   div {
@@ -9,7 +10,7 @@ export const MobileNav = styled.div`
 
     svg {
       cursor: pointer;
-      fill: 
+      fill: ${theme.colors.contrast};
       height: 40px;
       padding: 0;
       width: 40px;
@@ -25,15 +26,13 @@ export const MobileNav = styled.div`
     display: none;
   }
 `;
-type MobileNavItemsType = {
-  display: boolean;
-};
 
-export const MobileNavItems = styled.ul<MobileNavItemsType>`
+export const MobileNavItems = styled.div`
+  background-color: ${theme.palette.primary.main};
   color: ${theme.palette.primary.contrastText};
-  display: ${(p) => (p.display ? 'block' : 'none')};
+  cursor: pointer;
   font-size: 1.5rem;
-  padding-left: ${theme.spacing[1]};
+  padding: ${theme.spacing[2]};
 
   li {
     cursor: pointer;
