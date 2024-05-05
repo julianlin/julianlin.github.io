@@ -3,12 +3,13 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import { useRef, useState } from 'react';
 import Video from './assets/squat.mp4';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
-import { IntroSection } from './components/IntroSection/IntroSection';
+import { HeaderSection } from './components/HeaderSection/HeaderSection';
 import { LinksSection } from './components/LinksSection/LinksSection';
 import { Modal } from './components/Modal/Modal';
 import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import { theme } from './theme';
+import { IntroSection } from './components/IntroSection/IntroSection';
 
 const AppContainer = styled.div`
   background-color: ${theme.palette.primary.dark};
@@ -30,6 +31,7 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: ${theme.spacing[4]};
+  padding: ${theme.spacing[4]};
   width: 80%;
 `;
 
@@ -40,7 +42,6 @@ function App() {
   const linksRef = useRef<HTMLElement>(null);
 
   const handleOnCloseModal = () => {
-    console.log('test');
     setDisplayModal(false);
   };
 
@@ -52,13 +53,14 @@ function App() {
           profileRef={profileRef}
           linksRef={linksRef}
         />
-        <IntroSection />
+        <HeaderSection />
         <ContentContainer>
+          <IntroSection />
+          <ExperienceSection sectionRef={experienceRef} />
           <ProfileSection
             sectionRef={profileRef}
             setDisplayVideo={setDisplayModal}
           />
-          <ExperienceSection sectionRef={experienceRef} />
         </ContentContainer>
         <LinksSection sectionRef={linksRef} />
         <Modal open={displayModal} onClose={handleOnCloseModal}>

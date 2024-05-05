@@ -1,9 +1,8 @@
 import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
-import { Typography } from '@mui/material';
 import { Dispatch, FC, RefObject, SetStateAction } from 'react';
 import Column from './Column';
-import { Columns, ProfileSectionContainer, Summary } from './styles';
+import { Columns, ProfileSectionContainer } from './styles';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -16,17 +15,6 @@ const ProfileSection: FC<ProfileSectionType> = ({
 }) => {
   return (
     <ProfileSectionContainer ref={sectionRef}>
-      <Summary>
-        <Typography component='p' variant='h4'>
-          Hi, I'm Julian. Nice to meet you.
-        </Typography>
-        <Typography>
-          I've been a software engineer for over 4 years and have worked on a
-          variety of projects including annotation tools for machine learning,
-          an educational website for children, and SaaS for real estate. I'm
-          currently on the front-end team at WealthPark in Tokyo, Japan.
-        </Typography>
-      </Summary>
       <Columns>
         <Column
           icon={<CodeIcon />}
