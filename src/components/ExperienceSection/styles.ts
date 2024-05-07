@@ -55,8 +55,7 @@ export const ExperienceSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: ${theme.spacing[2]};
-  margin-top: ${theme.spacing[2]};
+  margin: ${theme.spacing[2]} 0;
   width: 80%;
 `;
 

@@ -72,7 +72,6 @@ export const Columns = styled.div`
   border: 2px solid ${theme.palette.secondary.main};
   display: flex;
   flex-direction: column;
-  margin: ${theme.spacing[2]};
   max-width: 1200px;
 
   > div:not(:last-child) {
@@ -89,31 +88,11 @@ export const Columns = styled.div`
   }
 `;
 
-export const Summary = styled.div`
-  align-items: center;
-  color: ${theme.colors.contrast};
-  display: flex;
-  flex-direction: column;
-  line-height: 2rem;
-  padding-bottom: ${theme.spacing[2]};
-  padding-left: ${theme.spacing[2]};
-  padding-right: ${theme.spacing[2]};
-  text-align: center;
-
-  p {
-    margin-bottom: ${theme.spacing[2]};
-  }
-
-  @media only screen and (min-width: ${breakpoints.medium}) {
-    max-width: 640px;
-  }
-`;
-
 export const ProfileSectionContainer = styled.section`
   align-items: center;
   color: ${theme.colors.textSecondary};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: ${theme.spacing[4]};
+  padding: ${theme.spacing[2]} ${theme.spacing[4]};
 `;

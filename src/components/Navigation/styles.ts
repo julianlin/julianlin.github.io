@@ -19,7 +19,6 @@ export const MobileNav = styled.div`
         fill: ${theme.palette.primary.dark};
       }
     }
-
   }
 
   @media only screen and (min-width: ${breakpoints.small}) {
@@ -35,14 +34,14 @@ export const MobileNavItems = styled.div`
   padding: ${theme.spacing[2]};
 
   li {
-    cursor: pointer;
+    cursor: pointepr;
     font-weight: bold;
     height: ${theme.spacing[3]};
     list-style-type: none;
     padding-bottom: ${theme.spacing[2]};
 
     &:hover {
-      color: ${theme.palette.primary.dark};
+      color: ${theme.palette.secondary.main};
     }
   }
 `;
@@ -61,7 +60,7 @@ export const NavItem = styled.a`
 
   &:hover {
     border-bottom: 2px solid ${theme.palette.primary.dark};
-    color: ${theme.palette.primary.dark};
+    color: ${theme.palette.secondary.main};
   }
 
   @media only screen and (max-width: ${breakpoints.small}) {
