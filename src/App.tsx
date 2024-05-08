@@ -37,7 +37,7 @@ const ContentContainer = styled.div`
 
 function App() {
   const [displayModal, setDisplayModal] = useState(false);
-  const profileRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
@@ -50,7 +50,7 @@ function App() {
       <AppContainer>
         <Navigation
           experienceRef={experienceRef}
-          profileRef={profileRef}
+          skillsRef={skillsRef}
           linksRef={linksRef}
         />
         <HeaderSection />
@@ -58,7 +58,7 @@ function App() {
           <IntroSection />
           <ExperienceSection sectionRef={experienceRef} />
           <ProfileSection
-            sectionRef={profileRef}
+            sectionRef={skillsRef}
             setDisplayVideo={setDisplayModal}
           />
         </ContentContainer>

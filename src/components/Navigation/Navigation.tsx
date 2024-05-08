@@ -12,13 +12,13 @@ import { Drawer } from '@mui/material';
 type NavigationProps = {
   experienceRef: RefObject<HTMLElement>;
   linksRef: RefObject<HTMLElement>;
-  profileRef: RefObject<HTMLElement>;
+  skillsRef: RefObject<HTMLElement>;
 };
 
 export const Navigation: FC<NavigationProps> = ({
   experienceRef,
   linksRef,
-  profileRef,
+  skillsRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,12 +28,12 @@ export const Navigation: FC<NavigationProps> = ({
 
   const Links = [
     {
-      name: 'About Me',
-      ref: profileRef,
-    },
-    {
       name: 'Experience',
       ref: experienceRef,
+    },
+    {
+      name: 'Skills',
+      ref: skillsRef,
     },
     {
       name: 'Links',

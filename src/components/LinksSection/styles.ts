@@ -15,32 +15,31 @@ export const LinksSectionContainer = styled.section`
   }
 
   li {
+    border-radius: 4px;
     margin: ${theme.spacing[1]};
     margin-top: 0;
+    padding: ${theme.spacing[1]} ${theme.spacing[3]};
+
+    &:hover {
+      background-color: ${theme.palette.secondary.main};
+
+      svg {
+        fill: ${theme.palette.secondary.main};
+      }
+    }
 
     a {
       align-items: center;
-      border-radius: 4px;
       color: ${theme.palette.primary.contrastText};
       display: flex;
       font-weight: bold;
       justify-content: center;
-      padding: ${theme.spacing[1]} ${theme.spacing[2]};
       text-decoration: none;
       width: ${theme.spacing[3]};
 
       &:active {
         border: 2px solid ${theme.colors.contrast};
       }
-
-      &:hover {
-        background-color: ${theme.palette.secondary.main};
-
-        svg {
-          fill: ${theme.palette.secondary.main};
-        }
-      }
-
       &:visited: {
         color: ${theme.colors.contrast};
       }
