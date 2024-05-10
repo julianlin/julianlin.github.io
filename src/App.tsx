@@ -10,6 +10,7 @@ import { Navigation } from './components/Navigation/Navigation';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import { theme } from './theme';
 import { IntroSection } from './components/IntroSection/IntroSection';
+import { breakpoints } from './theme';
 
 const AppContainer = styled.div`
   background-color: ${theme.palette.primary.dark};
@@ -33,6 +34,11 @@ const ContentContainer = styled.div`
   margin-bottom: ${theme.spacing[4]};
   padding: ${theme.spacing[4]};
   width: 80%;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    padding: ${theme.spacing[4]} ${theme.spacing[1]};
+    width: unset;
+  }
 `;
 
 function App() {

@@ -95,4 +95,8 @@ export const ProfileSectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: ${theme.spacing[2]} ${theme.spacing[4]};
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    padding: ${theme.spacing[2]};
+  }
 `;

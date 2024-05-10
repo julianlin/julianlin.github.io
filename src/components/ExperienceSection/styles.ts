@@ -57,6 +57,11 @@ export const ExperienceSectionContainer = styled.section`
   justify-content: center;
   margin: ${theme.spacing[2]} 0;
   width: 80%;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    padding: ${theme.spacing[3]} ${theme.spacing[1]};
+    width: unset;
+  }
 `;
 
 export const EducationContainer = styled.div`
