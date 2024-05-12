@@ -36,7 +36,7 @@ const ProfileSection: FC<ProfileSectionType> = ({
               items: ['React', 'Apollo', 'styled-components', 'Bootstrap'],
             },
           ]}
-          title='Front-end Development'
+          title='Front-End Development'
         />
         <Column
           icon={<Build />}

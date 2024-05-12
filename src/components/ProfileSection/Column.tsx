@@ -1,5 +1,6 @@
 import { OpenInNew } from '@mui/icons-material';
 import { Dispatch, FC, ReactElement, SetStateAction } from 'react';
+import { Typography } from '@mui/material';
 import { ColumnContainer, VideoItem } from './styles';
 
 type LinkType = {
@@ -29,11 +30,13 @@ const Column: FC<ColumnType> = ({ icon, sections, title }) => {
   return (
     <ColumnContainer>
       {icon}
-      <h3>{title}</h3>
+      <Typography component='h2' variant='h5'>{title}</Typography>
       {sections.map((section) => {
         return (
           <div>
-            <h4>{section.title}</h4>
+            <Typography component='h3' variant='h6'>
+              {section.title}
+            </Typography>
             <ul>
               {section.items.map((item) => {
                 if (typeof item === 'string') {

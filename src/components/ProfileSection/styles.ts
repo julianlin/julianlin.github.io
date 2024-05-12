@@ -8,10 +8,15 @@ export const ColumnContainer = styled.div`
   padding: ${theme.spacing[3]};
   text-align: center;
 
+  h3 {
+    margin-top: ${theme.spacing[2]};
+  }
+
   ul {
     color: ${theme.palette.primary.contrastText};
     line-height: 2rem;
     list-style-type: none;
+    margin: 0;
     padding: 0;
 
     a {
