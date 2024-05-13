@@ -3,15 +3,17 @@ import CodeIcon from '@mui/icons-material/Code';
 import { Dispatch, FC, RefObject, SetStateAction } from 'react';
 import Column from './Column';
 import { Columns, ProfileSectionContainer } from './styles';
+import SquatVideo from '../../assets/squat.mp4';
+import BenchVideo from '../../assets/benchpress.mp4';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
-  setDisplayVideo: Dispatch<SetStateAction<boolean>>;
+  setVideoSource: Dispatch<SetStateAction<string | undefined>>;
 };
 
 const ProfileSection: FC<ProfileSectionType> = ({
   sectionRef,
-  setDisplayVideo,
+  setVideoSource,
 }) => {
   return (
     <ProfileSectionContainer ref={sectionRef}>
@@ -61,8 +63,13 @@ const ProfileSection: FC<ProfileSectionType> = ({
                   type: 'LINK',
                 },
                 {
-                  text: 'Can squat over 400lb',
-                  action: setDisplayVideo,
+                  text: 'Squat 400lb',
+                  action: () => setVideoSource(SquatVideo),
+                  type: 'ACTION',
+                },
+                {
+                  text: 'Bench Press 308lb',
+                  action: () => setVideoSource(BenchVideo),
                   type: 'ACTION',
                 },
               ],
