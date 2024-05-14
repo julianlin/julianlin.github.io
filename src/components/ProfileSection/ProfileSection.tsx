@@ -1,17 +1,18 @@
 import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
 import { Dispatch, FC, RefObject, SetStateAction } from 'react';
-import Column from './Column';
-import { Columns, ProfileSectionContainer } from './styles';
-import SquatVideo from '../../assets/squat.mp4';
 import BenchVideo from '../../assets/benchpress.mp4';
+import SquatVideo from '../../assets/squat.mp4';
+import { Column } from './Column';
+import { Columns, ProfileSectionContainer } from './styles';
+import { ProgrammingLanguages } from './constants';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
   setVideoSource: Dispatch<SetStateAction<string | undefined>>;
 };
 
-const ProfileSection: FC<ProfileSectionType> = ({
+export const ProfileSection: FC<ProfileSectionType> = ({
   sectionRef,
   setVideoSource,
 }) => {
@@ -23,15 +24,7 @@ const ProfileSection: FC<ProfileSectionType> = ({
           sections={[
             {
               title: 'Languages',
-              items: [
-                'Javascript',
-                'Typescript',
-                'HTML',
-                'CSS',
-                'SQL',
-                'Python',
-                'GraphQL',
-              ],
+              items: ProgrammingLanguages,
             },
             {
               title: 'Libraries',
@@ -56,7 +49,7 @@ const ProfileSection: FC<ProfileSectionType> = ({
               title: 'Other Skills and Achievements',
               items: [
                 'Japanese(JLPT N1)',
-                '2 years exp as manager',
+                'Managed a data annotation team for 2 years',
                 {
                   text: 'Gold medalist in Wushu',
                   link: 'http://cmat.calwushu.com/cmat19results.html',
@@ -81,5 +74,3 @@ const ProfileSection: FC<ProfileSectionType> = ({
     </ProfileSectionContainer>
   );
 };
-
-export default ProfileSection;

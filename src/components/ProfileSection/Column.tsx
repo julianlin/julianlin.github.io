@@ -26,7 +26,7 @@ type ColumnType = {
   title: string;
 };
 
-const Column: FC<ColumnType> = ({ icon, sections, title }) => {
+export const Column: FC<ColumnType> = ({ icon, sections, title }) => {
   return (
     <ColumnContainer>
       {icon}
@@ -66,5 +66,3 @@ const Column: FC<ColumnType> = ({ icon, sections, title }) => {
     </ColumnContainer>
   );
 };
-
-export default Column;

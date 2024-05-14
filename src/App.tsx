@@ -6,7 +6,7 @@ import { IntroSection } from './components/IntroSection/IntroSection';
 import { LinksSection } from './components/LinksSection/LinksSection';
 import { Modal } from './components/Modal/Modal';
 import { Navigation } from './components/Navigation/Navigation';
-import ProfileSection from './components/ProfileSection/ProfileSection';
+import { ProfileSection } from './components/ProfileSection/ProfileSection';
 import { AppContainer, ContentContainer } from './styles';
 import { theme } from './theme';
 
