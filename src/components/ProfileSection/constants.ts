@@ -7,3 +7,5 @@ export const ProgrammingLanguages = [
   'Python',
   'GraphQL',
 ];
+
+export const Libraries = ['React', 'Apollo', 'styled-components', 'Bootstrap'];

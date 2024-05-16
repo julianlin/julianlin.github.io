@@ -5,7 +5,7 @@ import BenchVideo from '../../assets/benchpress.mp4';
 import SquatVideo from '../../assets/squat.mp4';
 import { Column } from './Column';
 import { Columns, ProfileSectionContainer } from './styles';
-import { ProgrammingLanguages } from './constants';
+import { ProgrammingLanguages, Libraries } from './constants';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -28,7 +28,7 @@ export const ProfileSection: FC<ProfileSectionType> = ({
             },
             {
               title: 'Libraries',
-              items: ['React', 'Apollo', 'styled-components', 'Bootstrap'],
+              items: Libraries,
             },
           ]}
           title='Front-End Development'
