@@ -5,7 +5,7 @@ import BenchVideo from '../../assets/benchpress.mp4';
 import SquatVideo from '../../assets/squat.mp4';
 import { Column } from './Column';
 import { Columns, ProfileSectionContainer } from './styles';
-import { ProgrammingLanguages, Libraries } from './constants';
+import { ProgrammingLanguages, Libraries, Tools } from './constants';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -37,7 +37,7 @@ export const ProfileSection: FC<ProfileSectionType> = ({
           icon={<Build />}
           sections={[
             { title: 'Frameworks', items: ['Express', 'Next.js'] },
-            { title: 'Tools', items: ['GitHub', 'GitLab', 'Invision'] },
+            { title: 'Tools', items: Tools },
           ]}
           title='Dev Tools and Technologies'
         />
