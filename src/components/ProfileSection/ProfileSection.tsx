@@ -6,6 +6,7 @@ import SquatVideo from '../../assets/squat.mp4';
 import { Column } from './Column';
 import { Columns, ProfileSectionContainer } from './styles';
 import { ProgrammingLanguages, Libraries, Tools } from './constants';
+import { createVideoItem } from './utils';
 
 type ProfileSectionType = {
   sectionRef: RefObject<HTMLElement>;
@@ -55,16 +56,12 @@ export const ProfileSection: FC<ProfileSectionType> = ({
                   link: 'http://cmat.calwushu.com/cmat19results.html',
                   type: 'LINK',
                 },
-                {
-                  text: 'Squat 400lb',
-                  action: () => setVideoSource(SquatVideo),
-                  type: 'ACTION',
-                },
-                {
-                  text: 'Bench Press 308lb',
-                  action: () => setVideoSource(BenchVideo),
-                  type: 'ACTION',
-                },
+                createVideoItem('Squat 400lb', () =>
+                  setVideoSource(SquatVideo),
+                ),
+                createVideoItem('Bench Press 308lb', () =>
+                  setVideoSource(BenchVideo),
+                ),
               ],
             },
           ]}
