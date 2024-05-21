@@ -10,4 +10,4 @@ export const ProgrammingLanguages = [
 
 export const Libraries = ['React', 'Apollo', 'styled-components', 'Bootstrap'];
 
-export const Tools = ['GitHub', 'GitLab', 'Invision'];
+export const Tools = ['GitHub', 'GitLab', 'Figma', 'Invision'];

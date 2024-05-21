@@ -16,7 +16,7 @@ type ActionType = {
 };
 
 type SectionType = {
-  title: string;
+  title?: string;
   items: (ActionType | LinkType | string)[];
 };
 
@@ -34,9 +34,11 @@ export const Column: FC<ColumnType> = ({ icon, sections, title }) => {
       {sections.map((section) => {
         return (
           <div>
-            <Typography component='h3' variant='h6'>
-              {section.title}
-            </Typography>
+            {title && (
+              <Typography component='h3' variant='h6'>
+                {section.title}
+              </Typography>
+            )}
             <ul>
               {section.items.map((item) => {
                 if (typeof item === 'string') {

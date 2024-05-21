@@ -45,12 +45,10 @@ export const ProfileSection: FC<ProfileSectionType> = ({
         <Column
           icon={<Person />}
           sections={[
-            { title: 'Tools', items: ['Invision', 'Jira', 'Confluence'] },
             {
-              title: 'Other Skills and Achievements',
               items: [
                 'Japanese(JLPT N1)',
-                'Managed a data annotation team for 2 years',
+                'Managed a data annotation team',
                 {
                   text: 'Gold medalist in Wushu',
                   link: 'http://cmat.calwushu.com/cmat19results.html',
