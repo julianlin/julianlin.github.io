@@ -1,8 +1,20 @@
 export const jobs = [
   {
+    companyName: 'Amazon Web Services(AWS)',
+    startDate: 'June 2021',
+    endDate: 'Present',
+    link: 'https://aws.amazon.com/sagemaker/canvas/',
+    description: [
+      'Front End Engineer working on Amazon SageMaker Canvas',
+      'Helped launch the product at AWS re:Invent 2021 and own several critical features',
+      'Created an automatic canary testing pipeline that now runs 10s of thousands of tests a day over several regions, helping catch various issues that can arise in production applications',
+    ],
+    positionName: 'Front End Engineer',
+  },
+  {
     companyName: 'WealthPark',
     startDate: 'Jan 2020',
-    endDate: 'Present',
+    endDate: 'June 2021',
     link: 'https://wealth-park.com/en/',
     description: [
       'Develop asset management and administration platforms for investors and the largest property management companies in Japan',
