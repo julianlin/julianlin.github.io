@@ -29,10 +29,11 @@ export const IntroSection = () => {
         Hi, I'm Julian. Nice to meet you.
       </Typography>
       <Typography>
-        I've been a software engineer for over 4 years and have worked on a
-        variety of projects including annotation tools for machine learning,
-        an educational website for children, and SaaS for real estate. I'm
-        currently on the front-end team at WealthPark in Tokyo, Japan.
+        I'm a front-end focused software engineer and have worked on a variety
+        of projects including a low code/no code machine learning service,
+        annotation tools for machine learning, SaaS for real estate and an
+        educational website for children. I'm currently on the Amazon SageMaker
+        Canvas team at Amazon Web Services.
       </Typography>
     </Summary>
   );
