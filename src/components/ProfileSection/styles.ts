@@ -53,12 +53,6 @@ export const ColumnContainer = styled.div`
     height: ${theme.spacing[4]};
     width: ${theme.spacing[4]};
   }
-
-  @media only screen and (min-width: ${breakpoints.medium}) {
-    height: 600px;
-    margin: 0;
-    width: 100%;
-  }
 `;
 
 export const VideoItem = styled.li`
