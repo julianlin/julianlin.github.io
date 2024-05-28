@@ -8,6 +8,13 @@ export const ProgrammingLanguages = [
   'GraphQL',
 ];
 
-export const Libraries = ['React', 'Apollo', 'styled-components', 'Bootstrap'];
+export const Libraries = [
+  'React',
+  'Apollo',
+  'emotion',
+  'styled-components',
+  'Material UI (MUI)',
+  'Bootstrap',
+];
 
 export const Tools = ['GitHub', 'GitLab', 'Figma', 'Invision'];
