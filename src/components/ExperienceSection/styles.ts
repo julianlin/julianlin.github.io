@@ -59,7 +59,8 @@ export const ExperienceSectionContainer = styled.section`
   width: 80%;
 
   @media only screen and (max-width: ${breakpoints.medium}) {
-    padding: ${theme.spacing[3]} ${theme.spacing[1]};
+    margin: 0px;
+    padding: ${theme.spacing[1]};
     width: unset;
   }
 `;
