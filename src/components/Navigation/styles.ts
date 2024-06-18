@@ -16,7 +16,7 @@ export const MobileNav = styled.div`
       width: 40px;
 
       &:hover {
-        fill: ${theme.palette.primary.dark};
+        fill: ${theme.palette.secondary.main};
       }
     }
   }
