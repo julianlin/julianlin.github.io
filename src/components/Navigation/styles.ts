@@ -44,6 +44,20 @@ export const MobileNavItems = styled.div`
       color: ${theme.palette.secondary.main};
     }
   }
+
+  svg {
+    height: 32px;
+    margin-bottom: ${theme.spacing[2]};
+    margin-left: -4px;
+    width: 32px;
+
+    &:hover {
+      fill: ${theme.palette.secondary.main};
+      height: 40px;
+      margin-bottom: calc(${theme.spacing[2]} - 8px);
+      width: 40px;
+    }
+  }
 `;
 
 export const NavItem = styled.a`
