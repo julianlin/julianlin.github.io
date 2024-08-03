@@ -21,6 +21,7 @@ export const ColumnContainer = styled.div`
 
     a {
       align-items: center;
+      color: ${theme.palette.primary.contrastText};
       display: flex;
       justify-content: center;
       padding: 0;
@@ -57,6 +58,7 @@ export const ColumnContainer = styled.div`
 
 export const VideoItem = styled.li`
   cursor: pointer;
+
   &:hover {
     color: ${theme.palette.secondary.main};
 
@@ -77,7 +79,7 @@ export const Columns = styled.div`
     border-bottom: 1px solid ${theme.palette.secondary.main};
   }
 
-  @media only screen and (min-width: ${breakpoints.medium}) {
+  @media only screen and (min-width: ${breakpoints.large}) {
     > div:not(:last-child) {
       border-bottom: none;
       border-right: 2px solid ${theme.palette.secondary.main};

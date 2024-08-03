@@ -2,10 +2,11 @@ import { Build, Person } from '@mui/icons-material';
 import CodeIcon from '@mui/icons-material/Code';
 import { Dispatch, FC, RefObject, SetStateAction } from 'react';
 import BenchVideo from '../../assets/benchpress.mp4';
+import DeadliftVideo from '../../assets/deadlift.mp4';
 import SquatVideo from '../../assets/squat.mp4';
 import { Column } from './Column';
+import { Libraries, ProgrammingLanguages, Tools } from './constants';
 import { Columns, ProfileSectionContainer } from './styles';
-import { ProgrammingLanguages, Libraries, Tools } from './constants';
 import { createVideoItem } from './utils';
 
 type ProfileSectionType = {
@@ -49,17 +50,20 @@ export const ProfileSection: FC<ProfileSectionType> = ({
               items: [
                 'Japanese(JLPT N1)',
                 'Managed a data annotation team',
+                createVideoItem('Deadlift 500lb', () =>
+                  setVideoSource(DeadliftVideo),
+                ),
+                createVideoItem('Bench Press 308lb', () =>
+                  setVideoSource(BenchVideo),
+                ),
+                createVideoItem('Squat 400lb', () =>
+                  setVideoSource(SquatVideo),
+                ),
                 {
                   text: 'Gold medalist in Wushu',
                   link: 'http://cmat.calwushu.com/cmat19results.html',
                   type: 'LINK',
                 },
-                createVideoItem('Squat 400lb', () =>
-                  setVideoSource(SquatVideo),
-                ),
-                createVideoItem('Bench Press 308lb', () =>
-                  setVideoSource(BenchVideo),
-                ),
               ],
             },
           ]}

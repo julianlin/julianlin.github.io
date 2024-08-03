@@ -30,7 +30,9 @@ export const Column: FC<ColumnType> = ({ icon, sections, title }) => {
   return (
     <ColumnContainer>
       {icon}
-      <Typography component='h2' variant='h5'>{title}</Typography>
+      <Typography component='h2' variant='h5'>
+        {title}
+      </Typography>
       {sections.map((section) => {
         return (
           <div>
