@@ -10,6 +10,6 @@ Github Pages is used to host the site.
 
 ### `npm run deploy`
 
-This will build the code in your current branch and push it to the `main` branch, which
-will be deployed to github pages site.
+This will build the code in the local `main` branch and push it to the remote
+`main` branch, which will be deployed to github pages site.
 
