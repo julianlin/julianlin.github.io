@@ -49,7 +49,6 @@ export const ProfileSection: FC<ProfileSectionType> = ({
             {
               items: [
                 'Japanese(JLPT N1)',
-                'Managed a data annotation team',
                 createVideoItem('Deadlift 500lb', () =>
                   setVideoSource(DeadliftVideo),
                 ),
