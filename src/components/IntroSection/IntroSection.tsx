@@ -1,11 +1,13 @@
 import { Typography } from '@mui/material';
 import { Summary } from './styles';
+import { useI18n } from '../../hooks/useI18n';
 
 export const IntroSection = () => {
+  const { i18n } = useI18n();
   return (
     <Summary>
       <Typography component='p' variant='h4'>
-        Hi, I'm Julian. Nice to meet you.
+        {i18n.intro.header}
       </Typography>
       <Typography>
         I'm a front-end focused software engineer and have worked on a variety

@@ -6,6 +6,10 @@ Most generic components are from Material UI.
 Emotion is used for component styling.
 Github Pages is used to host the site.
 
+# Run Locally
+
+### `npm run deploy`
+
 # Deployment
 
 ### `npm run deploy`

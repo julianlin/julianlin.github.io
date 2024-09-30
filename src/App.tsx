@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material';
 import { useRef, useState } from 'react';
+import { SettingsContext } from './SettingsContext';
 import { ExperienceSection } from './components/ExperienceSection/ExperienceSection';
 import { HeaderSection } from './components/HeaderSection/HeaderSection';
 import { IntroSection } from './components/IntroSection/IntroSection';
@@ -11,6 +12,7 @@ import { AppContainer, ContentContainer } from './styles';
 import { theme } from './theme';
 
 export const App = () => {
+  const [language, setLanguage] = useState<'en' | 'jp'>('en');
   const [videoSource, setVideoSource] = useState<string | undefined>(undefined);
   const skillsRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
@@ -22,28 +24,30 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={createTheme(theme)}>
-      <AppContainer>
-        <Navigation
-          experienceRef={experienceRef}
-          skillsRef={skillsRef}
-          linksRef={linksRef}
-        />
-        <HeaderSection />
-        <ContentContainer>
-          <IntroSection />
-          <ExperienceSection sectionRef={experienceRef} />
-          <ProfileSection
-            sectionRef={skillsRef}
-            setVideoSource={setVideoSource}
+      <SettingsContext.Provider value={{ language, setLanguage }}>
+        <AppContainer>
+          <Navigation
+            experienceRef={experienceRef}
+            skillsRef={skillsRef}
+            linksRef={linksRef}
           />
-        </ContentContainer>
-        <LinksSection sectionRef={linksRef} />
-        <Modal open={!!videoSource} onClose={handleOnCloseModal}>
-          <div>
-            <video controls autoPlay src={videoSource} />
-          </div>
-        </Modal>
-      </AppContainer>
+          <HeaderSection />
+          <ContentContainer>
+            <IntroSection />
+            <ExperienceSection sectionRef={experienceRef} />
+            <ProfileSection
+              sectionRef={skillsRef}
+              setVideoSource={setVideoSource}
+            />
+          </ContentContainer>
+          <LinksSection sectionRef={linksRef} />
+          <Modal open={!!videoSource} onClose={handleOnCloseModal}>
+            <div>
+              <video controls autoPlay src={videoSource} />
+            </div>
+          </Modal>
+        </AppContainer>
+      </SettingsContext.Provider>
     </ThemeProvider>
   );
 };
