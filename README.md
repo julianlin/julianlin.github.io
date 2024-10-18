@@ -8,7 +8,7 @@ Github Pages is used to host the site.
 
 # Run Locally
 
-### `npm run deploy`
+### `npm run start`
 
 # Deployment
 

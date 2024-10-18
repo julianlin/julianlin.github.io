@@ -8,6 +8,7 @@ import {
   NavigationContainer,
 } from './styles';
 import { Drawer } from '@mui/material';
+import { useI18n } from '../../hooks/useI18n';
 
 type NavigationProps = {
   experienceRef: RefObject<HTMLElement>;
@@ -21,6 +22,7 @@ export const Navigation: FC<NavigationProps> = ({
   skillsRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { i18n } = useI18n();
 
   const onClickNavItem = (ref: RefObject<HTMLElement>) => {
     if (ref.current) window.scrollTo(0, ref.current.offsetTop - 64);
@@ -28,15 +30,15 @@ export const Navigation: FC<NavigationProps> = ({
 
   const Links = [
     {
-      name: 'Experience',
+      name: i18n.navigation.experience,
       ref: experienceRef,
     },
     {
-      name: 'Skills',
+      name: i18n.navigation.skills,
       ref: skillsRef,
     },
     {
-      name: 'Links',
+      name: i18n.navigation.links,
       ref: linksRef,
     },
   ];
